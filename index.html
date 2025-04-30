@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio Web</title>
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +16,183 @@
     />
   </head>
   <body>
-    
+    <header class="text-center py-5">
+      <img
+        src="ruta-a-tu-foto.jpg"
+        alt="Foto de perfil"
+        class="rounded-circle mb-3"
+        width="150"
+        height="150"
+      />
+      <h1>Génesis Mata Vega</h1>
+      <h2 class="fs-5">Desarrolladora Web FrontEnd</h2>
+      <p><i class="bi bi-geo-alt-fill"></i> Costa Rica</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="#" class="btn btn-outline-light rounded-circle"
+          ><i class="bi bi-envelope-fill"></i
+        ></a>
+        <a href="#" class="btn btn-outline-light rounded-circle">CV</a>
+        <a href="#" class="btn btn-outline-light rounded-circle"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a href="#" class="btn btn-outline-light rounded-circle"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Sobre mí -->
+      <section class="my-5">
+        <h3 class="fw-bold">Sobre mí</h3>
+        <p>
+          Desarrolladora web con habilidades en front-end y UX. Interesada en
+          aprender nuevas tecnologías y resolver desafíos técnicos. Apasionada
+          por la creación de experiencias de usuario intuitivas y funcionales.
+          Capaz de trabajar en equipo y cumplir con los plazos de entrega.
+        </p>
+      </section>
+
+      <!-- Tecnologías -->
+      <section class="my-5">
+        <h3 class="fw-bold">Tecnologías</h3>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge bg-secondary">HTML</span>
+          <span class="badge bg-secondary">CSS</span>
+          <span class="badge bg-secondary">JavaScript</span>
+          <span class="badge bg-secondary">Bootstrap</span>
+          <span class="badge bg-secondary">WordPress / Elementor</span>
+          <span class="badge bg-secondary">PHP</span>
+          <span class="badge bg-secondary">C#</span>
+          <span class="badge bg-secondary">JAVA</span>
+          <span class="badge bg-secondary">MySQL</span>
+          <span class="badge bg-secondary">SQL Server</span>
+          <span class="badge bg-secondary">Github</span>
+          <span class="badge bg-secondary">SCRUM</span>
+          <span class="badge bg-secondary">Figma</span>
+          <span class="badge bg-secondary">WebFlow</span>
+          <span class="badge bg-secondary">MVC</span>
+        </div>
+      </section>
+
+      <!-- Experiencia -->
+      <section class="my-5">
+        <h3 class="fw-bold">Experiencia</h3>
+        <div class="mb-4">
+          <h5>Pixel Desing</h5>
+          <p class="text-muted">
+            Desarrollador FrontEnd Freelance · agosto 2024 - octubre 2024
+          </p>
+          <p>
+            Desarrollé un sitio web informativo y responsivo para una empresa de
+            productos de limpieza utilizando WordPress, Elementor y ACF...
+          </p>
+        </div>
+        <div>
+          <h5>Colegio Vocacional de Artes y Oficios</h5>
+          <p class="text-muted">
+            Desarrollador FrontEnd Freelance · marzo 2024 - noviembre 2024
+          </p>
+          <p>
+            Colaboré en el diseño y desarrollo de un sistema de administración
+            de llaves para aulas y laboratorios...
+          </p>
+        </div>
+      </section>
+
+      <!-- Proyectos -->
+      <section class="my-5">
+        <h3 class="fw-bold">Proyectos</h3>
+        <!-- Proyecto 1 -->
+        <div class="mb-4">
+          <h5>Pixel Desing - Falcon Limpieza</h5>
+          <p>
+            <span class="badge bg-secondary">WordPress</span>
+            <span class="badge bg-secondary">Elementor</span>
+            <span class="badge bg-secondary">Unlimited Elements</span>
+          </p>
+          <img
+            src="ruta-a-imagen-proyecto1.jpg"
+            class="img-fluid rounded"
+            alt="Falcon Limpieza"
+          />
+        </div>
+        <!-- Proyecto 2 -->
+        <div class="mb-4">
+          <h5>Colegio Vocacional - Llaves SALI</h5>
+          <p>
+            <span class="badge bg-secondary">HTML</span>
+            <span class="badge bg-secondary">CSS</span>
+            <span class="badge bg-secondary">Bootstrap</span>
+            <span class="badge bg-secondary">JavaScript</span>
+            <span class="badge bg-secondary">PHP</span>
+          </p>
+          <img
+            src="ruta-a-imagen-proyecto2.jpg"
+            class="img-fluid rounded"
+            alt="Sistema SALI"
+          />
+        </div>
+        <!-- Proyecto 3 -->
+        <div>
+          <h5>Pixel Desing - Salarios y Vacaciones</h5>
+          <p>
+            <span class="badge bg-secondary">HTML</span>
+            <span class="badge bg-secondary">CSS</span>
+            <span class="badge bg-secondary">Bootstrap</span>
+            <span class="badge bg-secondary">JavaScript</span>
+            <span class="badge bg-secondary">MVC</span>
+          </p>
+          <img
+            src="ruta-a-imagen-proyecto3.jpg"
+            class="img-fluid rounded"
+            alt="Sistema de salarios"
+          />
+        </div>
+      </section>
+
+      <!-- Referencias -->
+      <section class="my-5">
+        <h3 class="fw-bold">Referencias</h3>
+        <div class="row text-dark">
+          <div class="col-md-4 mb-3">
+            <div class="bg-secondary-subtle p-3 rounded">
+              <p><strong>Nombre</strong></p>
+              <p>Opinión</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="bg-secondary-subtle p-3 rounded">
+              <p><strong>Nombre</strong></p>
+              <p>Opinión</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="bg-secondary-subtle p-3 rounded">
+              <p><strong>Nombre</strong></p>
+              <p>Opinión</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-5">
+      <h4 class="fw-bold">Contacto</h4>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="#" class="btn btn-outline-light rounded-circle"
+          ><i class="bi bi-envelope-fill"></i
+        ></a>
+        <a href="#" class="btn btn-outline-light rounded-circle">CV</a>
+        <a href="#" class="btn btn-outline-light rounded-circle"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a href="#" class="btn btn-outline-light rounded-circle"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+      </div>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

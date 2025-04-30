@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Macondo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Special+Elite&display=swap');
+:root {
+    --color-fondo: #170329;
+    --texto-principal: #FFFFFF;
+}
 
-body{
-    font-family: "Montserrat", sans-serif;
+
+
+body {
+    font-family: "Special Elite", system-ui;
+    background-color: var(--color-fondo);
+    color: var(--texto-principal);
 }
