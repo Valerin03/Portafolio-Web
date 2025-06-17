@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Macondo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Special+Elite&display=swap');
+
 :root {
     --color-fondo: #170329;
     --texto-principal: #FFFFFF;
+    --icons-innactivo: #916BBF;
+    --icon-fond: #916bbf63;
 }
 
 
@@ -11,3 +14,86 @@ body {
     background-color: var(--color-fondo);
     color: var(--texto-principal);
 }
+
+svg {
+    color: var(--icons-innactivo);
+}
+
+/* Estilo base */
+.btn-lila {
+    border: 2px solid #916BBF;
+    background-color: var(--icon-fond);
+    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Icono dentro del botón */
+.btn-lila .icons {
+    width: 24px;
+    height: 24px;
+    filter: brightness(1);
+    transition: all 0.3s ease;
+}
+
+/* Hover con efecto fosforescente */
+.btn-lila:hover {
+    border-color: #B76FFF;
+    /* Un lila más brillante */
+    box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
+}
+
+.btn-lila:hover .icon {
+    filter: drop-shadow(0 0 5px #B76FFF) brightness(1.5);
+}
+
+/* Base: fuente tipo código y ocultar contenido fuera del área */
+.typewriter {
+    font-family: "Special Elite", system-ui;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    border-right: 2px solid transparent; /* Cursor transparente inicialmente */
+  }
+  
+  /* h1: se escribe lentamente y cursor visible durante la escritura */
+  .h1-type {
+    width: 0;
+    border-right: 2px solid #B76FFF; /* Aquí se aplica el color lila fosforescente */
+    animation: typingH1 4s steps(20, end) forwards, hideCursorH1 4s steps(20, end) forwards;
+  }
+  
+  /* h2: se escribe después del h1, cursor visible solo en h2 */
+  .h2-type {
+    width: 0;
+    border-right: 2px solid transparent; /* Sin cursor en h2 hasta que comience */
+    animation: typingH2 6s steps(30, end) 4s forwards, blink-caret 1.2s step-end infinite 4s; /* Cursor visible solo después de h1 */
+  }
+  
+  /* Animación de escritura para h1 */
+  @keyframes typingH1 {
+    from { width: 0; }
+    to { width: 18ch; }
+  }
+  
+  /* Ocultar el cursor después de que termine de escribir el h1 */
+  @keyframes hideCursorH1 {
+    from { border-right: 2px solid #B76FFF; }
+    to { border-right: 2px solid transparent; } /* El cursor desaparece */
+  }
+  
+  /* Animación de escritura para h2 */
+  @keyframes typingH2 {
+    from { width: 0; }
+    to { width: 29ch; }
+  }
+  
+  /* Parpadeo del cursor más lento */
+  @keyframes blink-caret {
+    0%, 100% { border-color: #B76FFF; } /* El cursor será lila fosforescente */
+    50% { border-color: transparent; }
+  }
+  
+  
