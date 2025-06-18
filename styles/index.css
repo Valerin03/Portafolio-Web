@@ -13,12 +13,69 @@ body {
     font-family: "Special Elite", system-ui;
     background-color: var(--color-fondo);
     color: var(--texto-principal);
+    overflow-x: hidden;
+    position: relative;
+}
+
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* detrás de todo */
+  pointer-events: none; /* no bloquea clicks */
 }
 
 svg {
     color: var(--icons-innactivo);
 }
 
+
+/* Contenedor principal */
+.sobre-mi-espacial {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+  padding: 1rem 2rem;
+}
+
+/* Carta flotante estilo vidrio */
+.carta-sobre-mi {
+  background: rgba(23, 3, 41, 0.7); /* fondo vidrio oscuro */
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(145, 107, 191, 0.4); /* borde lila translúcido */
+  padding: 2rem 3rem;
+  width: 90%;
+  max-width: 1000px; /* Más ancho pero aún controlado */
+  margin: 0 auto;
+  box-shadow: 0 0 25px #916BBF55; /* efecto glow suave */
+  animation: fadeUp 1.2s ease forwards;
+  color: #fff;
+}
+
+/* Animación de entrada */
+@keyframes fadeUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Títulos con efecto máquina de escribir */
+.carta-sobre-mi h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #B76FFF;
+}
 /* Estilo base */
 .btn-lila {
     border: 2px solid #916BBF;
@@ -96,4 +153,71 @@ svg {
     50% { border-color: transparent; }
   }
   
+  .imgPerfil{
+    width: 150px;
+    height: 190px;
+    border-radius: 200px;
+    border: 4px solid #916BBF;
+    box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
+  }
+
+  .badge {
+    position: relative;
+    border: 2px solid #916BBF;
+    background-color: var(--icon-fond, #170329); /* usa tu fondo o color por defecto */
+    color: #fff;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    cursor: default;
+    margin: 0.3rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+  }
   
+  /* Estilo de tooltip */
+  .badge .tooltip {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--icons-innactivo);
+    color: var(--texto-principal);
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    white-space: nowrap;
+    z-index: 10;
+  }
+  
+  /* Flechita del tooltip */
+  .badge .tooltip::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    background: var(--icons-innactivo);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Mostrar tooltip al hover */
+  .badge:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+  }
+  
+  /* Efecto hover fosforescente del badge */
+  .badge:hover {
+    border-color: #B76FFF;
+    box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
+  }
