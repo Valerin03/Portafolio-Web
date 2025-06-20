@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Macondo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&family=Special+Elite&display=swap');
 
+/* Variables*/
 :root {
   --color-fondo: #170329;
   --texto-principal: #FFFFFF;
@@ -24,6 +25,7 @@ body {
   height: 100%;
 }
 
+/* Está es la clase del canvas para el efecto estrellado*/
 #starfield {
   position: fixed;
   top: 0;
@@ -40,6 +42,13 @@ svg {
   color: var(--icons-innactivo);
 }
 
+#inicio .row {
+  padding-top: 60px;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* Contenedor principal */
 .sobre-mi-espacial {
@@ -126,39 +135,37 @@ svg {
   white-space: nowrap;
   overflow: hidden;
   display: inline-block;
+  border-right: 2px solid transparent;
 }
 
-/* h1: "Mi nombre es" */
+/* 1. "Hola!," - 6 caracteres */
 .h1-type {
   width: 0;
-  border-right: 2px solid transparent;
-  animation: 
+  animation:
     showCursorH1 0s 0s forwards,
-    typingH1 3s steps(15, end) 0s forwards,
-    hideCursor 0s 3s forwards;
+    typingH1 1.5s steps(6, end) 0s forwards,
+    hideCursor 0s 1.5s forwards;
 }
 
-/* h1: "Génesis" */
+/* 2. "Mi nombre es Génesis" - 20 caracteres */
 .h1-name {
   width: 0;
-  border-right: 2px solid transparent;
-  animation: 
-    showCursorName 0s 3s forwards,
-    typingName 2s steps(10, end) 3s forwards,
-    hideCursor 0s 5s forwards;
+  animation:
+    showCursorName 0s 1.6s forwards,
+    typingName 2.5s steps(20, end) 1.6s forwards,
+    hideCursor 0s 4.1s forwards;
 }
 
-/* h2: "Y soy desarrolladora..." */
+/* 3. "Y soy desarrolladora web FrontEnd" - 33 caracteres */
 .h2-type {
   width: 0;
-  border-right: 2px solid transparent;
-  animation: 
-    showCursorH2 0s 5.5s forwards,
-    typingH2 5s steps(33, end) 5.5s forwards,
-    hideCursor 0s 10.5s forwards;
+  animation:
+    showCursorH2 0s 4.2s forwards,
+    typingH2 3.5s steps(33, end) 4.2s forwards,
+    hideCursor 0s 7.7s forwards;
 }
 
-/* Cursor aparece justo al empezar */
+/* Cursor aparece */
 @keyframes showCursorH1 {
   to { border-right: 2px solid #B76FFF; }
 }
@@ -174,22 +181,19 @@ svg {
   to { border-right: 2px solid transparent; }
 }
 
-/* Typing animaciones */
+/* Typing */
 @keyframes typingH1 {
   from { width: 0; }
-  to { width: 15ch; }
+  to { width: 6ch; }
 }
-
 @keyframes typingName {
   from { width: 0; }
-  to { width: 8ch; }
+  to { width: 20ch; }
 }
-
 @keyframes typingH2 {
   from { width: 0; }
   to { width: 33ch; }
 }
-
 .imgPerfil {
   width: 150px;
   height: 190px;
