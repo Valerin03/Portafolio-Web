@@ -8,7 +8,8 @@
   --icon-fond: #916bbf63;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -17,8 +18,8 @@ html, body {
 body {
   font-family: "Special Elite", system-ui;
   background: var(--color-fondo);
-background: radial-gradient(circle,rgba(23, 3, 41, 1) 57%, rgba(0, 0, 0, 1) 100%);  
-color: var(--texto-principal);
+  background: radial-gradient(circle, rgba(23, 3, 41, 1) 57%, rgba(0, 0, 0, 1) 100%);
+  color: var(--texto-principal);
   overflow-x: hidden;
   position: relative;
   display: flex;
@@ -168,33 +169,61 @@ svg {
 
 /* Cursor aparece */
 @keyframes showCursorH1 {
-  to { border-right: 2px solid #B76FFF; }
+  to {
+    border-right: 2px solid #B76FFF;
+  }
 }
+
 @keyframes showCursorName {
-  to { border-right: 2px solid #B76FFF; }
+  to {
+    border-right: 2px solid #B76FFF;
+  }
 }
+
 @keyframes showCursorH2 {
-  to { border-right: 2px solid #B76FFF; }
+  to {
+    border-right: 2px solid #B76FFF;
+  }
 }
 
 /* Cursor desaparece */
 @keyframes hideCursor {
-  to { border-right: 2px solid transparent; }
+  to {
+    border-right: 2px solid transparent;
+  }
 }
 
 /* Typing */
 @keyframes typingH1 {
-  from { width: 0; }
-  to { width: 6ch; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 6ch;
+  }
 }
+
 @keyframes typingName {
-  from { width: 0; }
-  to { width: 20ch; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 20ch;
+  }
 }
+
 @keyframes typingH2 {
-  from { width: 0; }
-  to { width: 33ch; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 33ch;
+  }
 }
+
 .imgPerfil {
   width: 150px;
   height: 190px;
