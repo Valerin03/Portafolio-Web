@@ -16,8 +16,9 @@ html, body {
 
 body {
   font-family: "Special Elite", system-ui;
-  background-color: var(--color-fondo);
-  color: var(--texto-principal);
+  background: var(--color-fondo);
+background: radial-gradient(circle,rgba(23, 3, 41, 1) 57%, rgba(0, 0, 0, 1) 100%);  
+color: var(--texto-principal);
   overflow-x: hidden;
   position: relative;
   display: flex;
