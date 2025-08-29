@@ -44,6 +44,8 @@ svg {
   color: var(--icons-innactivo);
 }
 
+
+
 #inicio .row {
   padding-top: 60px;
   min-height: 40vh;
@@ -53,14 +55,37 @@ svg {
 }
 
 /* Contenedor principal */
+/* Centrar toda la sección verticalmente */
 .sobre-mi-espacial {
-  position: relative;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 20vh;
-  padding: 1rem 2rem;
+  min-height: 100vh; /* ocupa toda la pantalla */
+  padding: 2rem;
+}
+
+/* Grid tipo rompecabezas */
+.rompecabezas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 1rem;
+}
+
+.rompecabezas .pieza {
+  background-color: #1e0c3a;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.rompecabezas .pieza:hover {
+  transform: scale(1.05);
+}
+
+.rompecabezas .icono {
+  font-size: 2rem;
+  color: #916BBF;
 }
 
 /* Carta flotante estilo vidrio */
