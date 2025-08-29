@@ -302,7 +302,7 @@ svg {
 .nav-lateral {
   position: fixed;
   top: 50%;
-  right: 20px; /* 👉 botones al lado derecho */
+  right: 20px; 
   transform: translateY(-50%);
   z-index: 1000;
 }
@@ -322,7 +322,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;   /* solo ícono visible */
+  width: 40px; /* solo ícono visible */
   height: 40px;
   background-color: #170329;
   color: #fff;
