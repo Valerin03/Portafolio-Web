@@ -54,7 +54,6 @@ svg {
   justify-content: center;
 }
 
-/* Contenedor principal */
 /* Centrar toda la sección verticalmente */
 .sobre-mi-espacial {
   display: flex;
@@ -87,26 +86,6 @@ svg {
   font-size: 2rem;
   color: #916BBF;
 }
-
-/* Carta flotante estilo vidrio */
-.carta-sobre-mi {
-  background: rgba(23, 3, 41, 0.7);
-  /* fondo vidrio oscuro */
-  backdrop-filter: blur(10px);
-  border-radius: 1.5rem;
-  border: 1px solid rgba(145, 107, 191, 0.4);
-  /* borde lila translúcido */
-  padding: 2rem 3rem;
-  width: 90%;
-  max-width: 1000px;
-  /* Más ancho pero aún controlado */
-  margin: 0 auto;
-  box-shadow: 0 0 25px #916BBF55;
-  /* efecto glow suave */
-  animation: fadeUp 1.2s ease forwards;
-  color: #fff;
-}
-
 /* Animación de entrada */
 @keyframes fadeUp {
   from {
