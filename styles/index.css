@@ -423,8 +423,7 @@ ___
 
 .icon:hover {
   cursor: pointer;
-  border-radius: 50px;
-  background-color: #6e7281;
+  border-radius: 50px;  
 }
 
 .editor-content {
