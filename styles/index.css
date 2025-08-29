@@ -312,21 +312,85 @@ svg {
   z-index: 9999;
 }
 
-.circle {
-  width: 16px;
-  height: 16px;
+/* Navegador lateral */
+/* Navegador lateral */
+.nav-lateral {
+  position: fixed;
+  top: 50%;
+  right: 20px; /* 👉 botones al lado derecho */
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.nav-lateral ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-lateral li {
+  margin: 12px 0;
+}
+
+.nav-lateral a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;   /* solo ícono visible */
+  height: 40px;
+  background-color: #170329;
+  color: #fff;
   border: 2px solid #916BBF;
-  border-radius: 50%;
-  background-color: transparent;
+  border-radius: 50%; /* botón redondo principal */
   transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.circle:hover,
-.circle.active {
+/* Ícono dentro del botón */
+.nav-lateral a .icon {
+  font-size: 18px;
+  color: #916BBF;
+  transition: color 0.3s ease;
+}
+
+/* Texto flotante oculto */
+.nav-lateral a .text {
+  position: absolute;
+  right: 100%;       /* 👉 aparece a la izquierda del ícono */
+  margin-right: 10px;
+  background: #B76FFF;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  pointer-events: none; /* no bloquea clics */
+}
+
+/* Hover → muestra el texto */
+.nav-lateral a:hover .text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hover y activo en el botón */
+.nav-lateral a:hover,
+.nav-lateral a.active {
   background-color: #B76FFF;
-  box-shadow: 0 0 8px #B76FFF;
+  box-shadow: 0 0 6px #B76FFF;
 }
 
+.nav-lateral a:hover .icon,
+.nav-lateral a.active .icon {
+  color: #fff;
+}
+
+___
 .pantalla {
   display: none;
 }
