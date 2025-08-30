@@ -45,95 +45,13 @@ svg {
 }
 
 
-
+/*Inicio-Primera sección, home*/
 #inicio .row {
   padding-top: 60px;
   min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Centrar toda la sección verticalmente */
-.sobre-mi-espacial {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* ocupa toda la pantalla */
-  padding: 2rem;
-}
-
-/* Grid tipo rompecabezas */
-.rompecabezas {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-  gap: 1rem;
-}
-
-.rompecabezas .pieza {
-  background-color: #1e0c3a;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.rompecabezas .pieza:hover {
-  transform: scale(1.05);
-}
-
-.rompecabezas .icono {
-  font-size: 2rem;
-  color: #916BBF;
-}
-/* Animación de entrada */
-@keyframes fadeUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Títulos con efecto máquina de escribir */
-.carta-sobre-mi h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #B76FFF;
-}
-
-/* Estilo base */
-.btn-lila {
-  border: 2px solid #916BBF;
-  background-color: var(--icon-fond);
-  padding: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-/* Icono dentro del botón */
-.btn-lila .icons {
-  width: 24px;
-  height: 24px;
-  filter: brightness(1);
-  transition: all 0.3s ease;
-}
-
-/* Hover con efecto fosforescente */
-.btn-lila:hover {
-  border-color: #B76FFF;
-  /* Un lila más brillante */
-  box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
-}
-
-.btn-lila:hover .icon {
-  filter: drop-shadow(0 0 5px #B76FFF) brightness(1.5);
 }
 
 .typewriter {
@@ -235,12 +153,100 @@ svg {
   border: 4px solid #916BBF;
   box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
 }
+/*Fin-Primera sección, home*/
+
+
+/*Inicio-Segunda sección, sobre mí*/
+/* Centrar toda la sección verticalmente */
+.sobre-mi-espacial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ocupa toda la pantalla */
+  padding: 2rem;
+}
+
+/* Grid tipo rompecabezas */
+.rompecabezas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  gap: 1rem;
+}
+
+.rompecabezas .pieza {
+  background-color: #1e0c3a;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.rompecabezas .pieza:hover {
+  transform: scale(1.05);
+}
+
+.rompecabezas .icono {
+  font-size: 2rem;
+  color: #916BBF;
+}
+/* Animación de entrada */
+@keyframes fadeUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Títulos con efecto máquina de escribir */
+.carta-sobre-mi h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #B76FFF;
+}
+/*Fin-Segunda sección, sobre mí*/
+
+
+/* Estilo base */
+.btn-lila {
+  border: 2px solid #916BBF;
+  background-color: var(--icon-fond);
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Icono dentro del botón */
+.btn-lila .icons {
+  width: 24px;
+  height: 24px;
+  filter: brightness(1);
+  transition: all 0.3s ease;
+}
+
+/* Hover con efecto fosforescente */
+.btn-lila:hover {
+  border-color: #B76FFF;
+  /* Un lila más brillante */
+  box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
+}
+
+.btn-lila:hover .icon {
+  filter: drop-shadow(0 0 5px #B76FFF) brightness(1.5);
+}
+
+
 
 .badge {
   position: relative;
   border: 2px solid #916BBF;
   background-color: var(--icon-fond, #170329);
-  /* usa tu fondo o color por defecto */
   color: #fff;
   padding: 0.4rem 0.6rem;
   font-size: 0.85rem;
@@ -302,7 +308,7 @@ svg {
 .nav-lateral {
   position: fixed;
   top: 50%;
-  right: 20px; 
+  right: 20px;
   transform: translateY(-50%);
   z-index: 1000;
 }
@@ -322,60 +328,95 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; /* solo ícono visible */
+  width: 40px;
   height: 40px;
-  background-color: #170329;
+  background-color: #916BBF63; /* fondo semitransparente */
   color: #fff;
-  border: 2px solid #916BBF;
-  border-radius: 50%; /* botón redondo principal */
-  transition: all 0.3s ease;
+  border: 2px solid #916BBF;  /* borde que brillará */
+  border-radius: 50%;
   text-decoration: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* Ícono dentro del botón */
+/* Ícono */
 .nav-lateral a .icon {
   font-size: 18px;
-  color: #916BBF;
-  transition: color 0.3s ease;
+  color: #916BBF; /* mismo color que el borde */
+  transition: all 0.3s ease;
+  text-shadow: none; /* por defecto sin brillo */
 }
 
 /* Texto flotante oculto */
 .nav-lateral a .text {
+  font-family: "Special Elite", system-ui;
+  font-weight: 500;
   position: absolute;
-  right: 100%;       /* 👉 aparece a la izquierda del ícono */
+  right: 100%;
   margin-right: 10px;
-  background: #B76FFF;
-  color: #fff;
+  background: var(--icon-fond);
+  color: #B76FFF;
   padding: 6px 12px;
   border-radius: 20px;
-  font-size: 13px;
+  border-bottom-right-radius: 5px;
+  font-size: 15px;
   white-space: nowrap;
   opacity: 0;
   transform: translateX(10px);
   transition: all 0.3s ease;
-  pointer-events: none; /* no bloquea clics */
+  pointer-events: none;
 }
 
 /* Hover → muestra el texto */
 .nav-lateral a:hover .text {
   opacity: 1;
   transform: translateX(0);
+  border-color: #B76FFF; /* borde brillante */
+  box-shadow: 
+    0 0 5px #B76FFF,
+    0 0 10px #B76FFF,
+    0 0 15px #B76FFF;
 }
 
-/* Hover y activo en el botón */
+/* Hover y activo → borde e ícono brillan */
 .nav-lateral a:hover,
 .nav-lateral a.active {
-  background-color: #B76FFF;
-  box-shadow: 0 0 6px #B76FFF;
+  border-color: #B76FFF; /* borde brillante */
+  box-shadow: 
+    0 0 5px #B76FFF,
+    0 0 10px #B76FFF,
+    0 0 15px #B76FFF;   /* glow del borde */
 }
 
 .nav-lateral a:hover .icon,
 .nav-lateral a.active .icon {
-  color: #fff;
+  color: #B76FFF; /* mismo color que el borde */
+  text-shadow: 
+    0 0 5px #B76FFF,
+    0 0 10px #B76FFF,
+    0 0 15px #B76FFF;/* glow del ícono */
 }
 
-___
+/* Animación sutil de brillo del borde e ícono */
+@keyframes glow {
+  0%, 100% {
+    box-shadow:
+      0 0 5px #B76FFF,
+      0 0 10px #B76FFF,
+      0 0 15px #B76FFF;
+  }
+  50% {
+    box-shadow:
+      0 0 8px #B76FFF,
+      0 0 16px #B76FFF,
+      0 0 24px #B76FFF;
+  }
+}
+
+.nav-lateral a:hover {
+  animation: glow 1.5s infinite alternate;
+}
+
 .pantalla {
   display: none;
 }
