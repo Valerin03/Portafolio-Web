@@ -13,6 +13,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
@@ -153,24 +155,30 @@ svg {
   border: 4px solid #916BBF;
   box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
 }
+
 /*Fin-Primera sección, home*/
 
 
 /*Inicio-Segunda sección, sobre mí*/
 .sobre-mi {
-  min-height: 100dvh;         /* ocupa toda la pantalla */
+  height: auto;
+  /* Ajusta al contenido */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-block: 0 !important; /* evita márgenes que empujen */
+  margin-block: 0 !important;
   padding: 2rem;
   box-sizing: border-box;
+  margin-top: 120px !important;
+
 }
+
 /* Grid tipo rompecabezas */
 .rompecabezas {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 columnas iguales */
   gap: 1rem;
 }
 
@@ -190,6 +198,7 @@ svg {
   font-size: 2rem;
   color: #916BBF;
 }
+
 /* Animación de entrada */
 @keyframes fadeUp {
   from {
@@ -209,6 +218,7 @@ svg {
   margin-bottom: 1rem;
   color: #B76FFF;
 }
+
 /*Fin-Segunda sección, sobre mí*/
 
 
@@ -331,9 +341,11 @@ svg {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #916BBF63; /* fondo semitransparente */
+  background-color: #916BBF63;
+  /* fondo semitransparente */
   color: #fff;
-  border: 2px solid #916BBF;  /* borde que brillará */
+  border: 2px solid #916BBF;
+  /* borde que brillará */
   border-radius: 50%;
   text-decoration: none;
   cursor: pointer;
@@ -343,9 +355,11 @@ svg {
 /* Ícono */
 .nav-lateral a .icon {
   font-size: 18px;
-  color: #916BBF; /* mismo color que el borde */
+  color: #916BBF;
+  /* mismo color que el borde */
   transition: all 0.3s ease;
-  text-shadow: none; /* por defecto sin brillo */
+  text-shadow: none;
+  /* por defecto sin brillo */
 }
 
 /* Texto flotante oculto */
@@ -372,8 +386,9 @@ svg {
 .nav-lateral a:hover .text {
   opacity: 1;
   transform: translateX(0);
-  border-color: #B76FFF; /* borde brillante */
-  box-shadow: 
+  border-color: #B76FFF;
+  /* borde brillante */
+  box-shadow:
     0 0 5px #B76FFF,
     0 0 10px #B76FFF,
     0 0 15px #B76FFF;
@@ -382,30 +397,37 @@ svg {
 /* Hover y activo → borde e ícono brillan */
 .nav-lateral a:hover,
 .nav-lateral a.active {
-  border-color: #B76FFF; /* borde brillante */
-  box-shadow: 
+  border-color: #B76FFF;
+  /* borde brillante */
+  box-shadow:
     0 0 5px #B76FFF,
     0 0 10px #B76FFF,
-    0 0 15px #B76FFF;   /* glow del borde */
+    0 0 15px #B76FFF;
+  /* glow del borde */
 }
 
 .nav-lateral a:hover .icon,
 .nav-lateral a.active .icon {
-  color: #B76FFF; /* mismo color que el borde */
-  text-shadow: 
+  color: #B76FFF;
+  /* mismo color que el borde */
+  text-shadow:
     0 0 5px #B76FFF,
     0 0 10px #B76FFF,
-    0 0 15px #B76FFF;/* glow del ícono */
+    0 0 15px #B76FFF;
+  /* glow del ícono */
 }
 
 /* Animación sutil de brillo del borde e ícono */
 @keyframes glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow:
       0 0 5px #B76FFF,
       0 0 10px #B76FFF,
       0 0 15px #B76FFF;
   }
+
   50% {
     box-shadow:
       0 0 8px #B76FFF,
@@ -426,12 +448,16 @@ svg {
   display: block;
 }
 
+main {
+  flex: 1;
+  /* ocupa el espacio restante entre header y footer */
+}
 
 .main-content {
   flex: 0;
   display: flex;
   flex-direction: column;
-  height: auto; 
+  height: auto;
 }
 
 .code-editor {
@@ -466,7 +492,7 @@ svg {
 
 .icon:hover {
   cursor: pointer;
-  border-radius: 50px;  
+  border-radius: 50px;
 }
 
 .editor-content {
@@ -496,4 +522,9 @@ svg {
 
 .color-3 {
   color: rgb(207, 146, 120);
+}
+
+footer {
+  margin-top: auto;
+  /* empuja el footer al final */
 }
