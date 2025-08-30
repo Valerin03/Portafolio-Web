@@ -157,15 +157,16 @@ svg {
 
 
 /*Inicio-Segunda sección, sobre mí*/
-/* Centrar toda la sección verticalmente */
-.sobre-mi-espacial {
+.sobre-mi {
+  min-height: 100dvh;         /* ocupa toda la pantalla */
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh; /* ocupa toda la pantalla */
+  justify-content: center;
+  text-align: center;
+  margin-block: 0 !important; /* evita márgenes que empujen */
   padding: 2rem;
+  box-sizing: border-box;
 }
-
 /* Grid tipo rompecabezas */
 .rompecabezas {
   display: grid;
@@ -427,9 +428,10 @@ svg {
 
 
 .main-content {
-  flex: 1;
+  flex: 0;
   display: flex;
   flex-direction: column;
+  height: auto; 
 }
 
 .code-editor {
