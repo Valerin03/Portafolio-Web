@@ -271,25 +271,45 @@ svg {
 }
 
 /* Estilo de tooltip */
+.badge {
+  position: relative;
+  border: 2px solid #916BBF;
+  background-color: #170329;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: default;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.badge:hover {
+  border-color: #B76FFF;
+  box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
+  transform: translateY(-3px);
+}
+
 .badge .tooltip {
   position: absolute;
-  top: 0;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--icons-innactivo);
-  color: var(--texto-principal);
-  padding: 5px 10px;
+  background: #916BBF;
+  color: #fff;
+  padding: 4px 8px;
   font-size: 0.75rem;
   border-radius: 6px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
   pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.3s ease-in-out;
   white-space: nowrap;
   z-index: 10;
 }
 
-/* Flechita del tooltip */
 .badge .tooltip::before {
   content: "";
   position: absolute;
@@ -298,21 +318,25 @@ svg {
   transform: translateX(-50%) rotate(45deg);
   width: 8px;
   height: 8px;
-  background: var(--icons-innactivo);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background: #916BBF;
 }
 
-/* Mostrar tooltip al hover */
 .badge:hover .tooltip {
-  top: -40px;
   opacity: 1;
+  top: -45px;
 }
 
-/* Efecto hover fosforescente del badge */
-.badge:hover {
-  border-color: #B76FFF;
-  box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
+/* Máquina de escribir */
+#cargando {
+  font-family: monospace;
+  font-size: 1.1rem;
+  color: #B76FFF;
+  white-space: nowrap;
+  border-right: 2px solid #B76FFF;
+  overflow: hidden;
+  display: inline-block;
 }
+
 /* Fin de la seccion de tecnologias */
 
 
