@@ -171,7 +171,6 @@ svg {
   padding: 2rem;
   box-sizing: border-box;
   margin-top: 120px !important;
-
 }
 
 /* Grid tipo rompecabezas */
@@ -252,7 +251,7 @@ svg {
   filter: drop-shadow(0 0 5px #B76FFF) brightness(1.5);
 }
 
-
+/* Inicio de la seccion de tecnologias */
 
 .badge {
   position: relative;
@@ -314,6 +313,8 @@ svg {
   border-color: #B76FFF;
   box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
 }
+/* Fin de la seccion de tecnologias */
+
 
 /* Navegador lateral */
 .nav-lateral {
