@@ -252,38 +252,23 @@ svg {
 }
 
 /* Inicio de la seccion de tecnologias */
-
 .badge {
   position: relative;
   border: 2px solid #916BBF;
-  background-color: var(--icon-fond, #170329);
+  background-color: #170329; /* fondo */
   color: #fff;
-  padding: 0.4rem 0.6rem;
-  font-size: 0.85rem;
+  padding: 0.8rem 1.2rem; /* más grandes */
+  font-size: 1rem;
   font-weight: 500;
-  border-radius: 0.5rem;
-  cursor: default;
-  margin: 0.3rem;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-}
-
-/* Estilo de tooltip */
-.badge {
-  position: relative;
-  border: 2px solid #916BBF;
-  background-color: #170329;
-  color: #fff;
-  padding: 0.5rem 0.8rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
+  border-radius: 0.6rem;
   cursor: default;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  min-width: 120px;  /* ancho uniforme */
+  min-height: 50px;  /* alto uniforme */
+  margin: 0.4rem;
+  text-align: center;
   transition: all 0.3s ease-in-out;
 }
 
@@ -293,15 +278,16 @@ svg {
   transform: translateY(-3px);
 }
 
+/* Tooltip */
 .badge .tooltip {
   position: absolute;
-  top: -35px;
+  top: -40px;
   left: 50%;
   transform: translateX(-50%);
   background: #916BBF;
   color: #fff;
-  padding: 4px 8px;
-  font-size: 0.75rem;
+  padding: 4px 10px;
+  font-size: 0.8rem;
   border-radius: 6px;
   opacity: 0;
   pointer-events: none;
@@ -323,14 +309,14 @@ svg {
 
 .badge:hover .tooltip {
   opacity: 1;
-  top: -45px;
+  top: -50px;
 }
 
 /* Máquina de escribir */
 #cargando {
-  font-family: monospace;
+  font-family: "Special Elite", system-ui;
   font-size: 1.1rem;
-  color: #B76FFF;
+  color: #ffffff;
   white-space: nowrap;
   border-right: 2px solid #B76FFF;
   overflow: hidden;
