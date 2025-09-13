@@ -256,22 +256,18 @@ svg {
   position: relative;
   border: 2px solid #916BBF;
   background-color: #170329;
-  /* fondo */
   color: #fff;
-  padding: 0.8rem 1.2rem;
-  /* más grandes */
-  font-size: 1rem;
+  padding: 0.6rem 1rem; /* Compactamos */
+  font-size: 0.9rem;
   font-weight: 500;
-  border-radius: 0.6rem;
+  border-radius: 0.5rem;
   cursor: default;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-width: 120px;
-  /* ancho uniforme */
-  min-height: 50px;
-  /* alto uniforme */
-  margin: 0.4rem;
+  min-width: 100px; /* Más compacto */
+  min-height: 45px;
+  margin: 0.2rem; /* Menos espacio entre badges */
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
@@ -331,26 +327,48 @@ svg {
 .frontend-flow {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  gap: 1rem; /* Reducimos espacio entre pasos y flechas */
+  margin-bottom: 2rem; /* Espacio debajo del gráfico */
+  margin-top: 1.5rem;
 }
+
 
 .step {
   text-align: center;
   color: #fff;
+  font-size: 0.9rem; /* Texto más compacto */
 }
 
 .step svg {
   color: #916BBF;
   text-shadow: 0 0 10px #916BBF, 0 0 20px #916BBF;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem; /* Ícono más cerca del texto */
 }
 
 .arrow {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #916BBF;
   text-shadow: 0 0 8px #916BBF;
+  margin: 0 -4px; /* Flechas más pegadas */
 }
 
+
+#tecnologias .row {
+  row-gap: 0.6rem !important;   /* Menos espacio entre filas */
+  column-gap: 0.6rem !important; /* Menos espacio entre columnas */
+  margin-bottom: 3rem;
+}
+
+#tecnologias .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container-tecnologias{
+  margin-top: 20px;
+}
 /* Fin de la seccion de tecnologias */
 
 
