@@ -311,7 +311,9 @@ svg {
   opacity: 1;
   top: -50px;
 }
-
+.icon-badge{
+  padding-right: 10px;
+}
 /* Máquina de escribir */
 #cargando {
   font-family: "Special Elite", system-ui;
@@ -357,7 +359,7 @@ svg {
 #tecnologias .row {
   row-gap: 0.6rem !important;   /* Menos espacio entre filas */
   column-gap: 0.6rem !important; /* Menos espacio entre columnas */
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 #tecnologias .container {
@@ -367,7 +369,7 @@ svg {
 }
 
 #container-tecnologias{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 /* Fin de la seccion de tecnologias */
 
