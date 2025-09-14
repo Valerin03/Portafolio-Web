@@ -317,9 +317,7 @@ svg {
 /* Máquina de escribir */
 #cargando {
   font-family: "Special Elite", system-ui;
-  font-size: 1.1rem;
   color: #ffffff;
-  white-space: nowrap;
   border-right: 2px solid #B76FFF;
   overflow: hidden;
   display: inline-block;
