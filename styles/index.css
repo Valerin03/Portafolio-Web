@@ -6,6 +6,7 @@
   --texto-principal: #FFFFFF;
   --icons-innactivo: #916BBF;
   --icon-fond: #916bbf63;
+  --fond-cards: #916bbf44;
 }
 
 html,
@@ -257,7 +258,8 @@ svg {
   border: 2px solid #916BBF;
   background-color: #170329;
   color: #fff;
-  padding: 0.6rem 1rem; /* Compactamos */
+  padding: 0.6rem 1rem;
+  /* Compactamos */
   font-size: 0.9rem;
   font-weight: 500;
   border-radius: 0.5rem;
@@ -265,9 +267,11 @@ svg {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  min-width: 100px; /* Más compacto */
+  min-width: 100px;
+  /* Más compacto */
   min-height: 45px;
-  margin: 0.2rem; /* Menos espacio entre badges */
+  margin: 0.2rem;
+  /* Menos espacio entre badges */
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
@@ -311,9 +315,11 @@ svg {
   opacity: 1;
   top: -50px;
 }
-.icon-badge{
+
+.icon-badge {
   padding-right: 10px;
 }
+
 /* Máquina de escribir */
 #cargando {
   font-family: "Special Elite", system-ui;
@@ -328,8 +334,10 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem; /* Reducimos espacio entre pasos y flechas */
-  margin-bottom: 2rem; /* Espacio debajo del gráfico */
+  gap: 1rem;
+  /* Reducimos espacio entre pasos y flechas */
+  margin-bottom: 2rem;
+  /* Espacio debajo del gráfico */
   margin-top: 1.5rem;
 }
 
@@ -337,26 +345,31 @@ svg {
 .step {
   text-align: center;
   color: #fff;
-  font-size: 0.9rem; /* Texto más compacto */
+  font-size: 0.9rem;
+  /* Texto más compacto */
 }
 
 .step svg {
   color: #916BBF;
   text-shadow: 0 0 10px #916BBF, 0 0 20px #916BBF;
-  margin-bottom: 0.3rem; /* Ícono más cerca del texto */
+  margin-bottom: 0.3rem;
+  /* Ícono más cerca del texto */
 }
 
 .arrow {
   font-size: 1.2rem;
   color: #916BBF;
   text-shadow: 0 0 8px #916BBF;
-  margin: 0 -4px; /* Flechas más pegadas */
+  margin: 0 -4px;
+  /* Flechas más pegadas */
 }
 
 
 #tecnologias .row {
-  row-gap: 0.6rem !important;   /* Menos espacio entre filas */
-  column-gap: 0.6rem !important; /* Menos espacio entre columnas */
+  row-gap: 0.6rem !important;
+  /* Menos espacio entre filas */
+  column-gap: 0.6rem !important;
+  /* Menos espacio entre columnas */
   margin-bottom: 1rem;
 }
 
@@ -366,10 +379,114 @@ svg {
   align-items: center;
 }
 
-#container-tecnologias{
+#container-tecnologias {
   margin-top: 10px;
 }
+
 /* Fin de la seccion de tecnologias */
+
+/* Inicio de proyectos */
+.card-row {
+  display: flex;          
+  gap: 2.5rem;            /* espacio entre cards */
+  justify-content: center; /* centra todo horizontalmente */
+  flex-wrap: wrap;        
+}
+
+.card {
+  width: 400px !important;
+  height: 434px;
+  background: var(--fond-cards);
+  position: relative;
+  border-color: #B76FFF;
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+.card-img-top {
+  height: 50%;
+}
+
+.card-body {
+  color: black;
+  gap: .5em;
+  display: grid;
+  place-content: center;
+}
+
+.card-button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 2rem;
+  border: none;
+  background-color: #b16bf7;
+  color: #fff;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+  text-decoration: none !important;
+  text-align: center;
+}
+
+.text-body {
+  color: rgb(134, 134, 134);
+}
+
+/*Text*/
+.text-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*Hover*/
+.card:hover {
+  border-color: #B76FFF;
+  box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
+}
+
+.card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+ /* Reverse the order of the stars */
+  font-size: 0;
+ /* Remove the space between the elements */
+}
+
+.rating input[type="radio"] {
+  display: none;
+ /* Hide the radio buttons */
+}
+
+.rating label {
+  font-size: 30px;
+  color: #D4BEE4;
+ /* Empty star color */
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.rating label:before {
+  content: "\2605";
+ /* Unicode character for filled star */
+}
+
+.rating input[type="radio"]:checked ~ label:before {
+  content: "\2606";
+ /* Unicode character for empty star */
+  color: #D4BEE4;
+ /* Filled star color */
+}
+/* Fin de proyectos */
 
 
 /* Navegador lateral */
