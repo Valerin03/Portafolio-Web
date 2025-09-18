@@ -591,17 +591,21 @@
 
       <!-- Proyectos -->
       <section class="my-5" id="proyectos">
-        <h3 class="fw-bold">My Projects</h3>
+        <h3 class="fw-bold text-center" id="tittle-myProjects">My Projects</h3>
 
-        <!-- Nav Tabs -->
-        <ul class="nav nav-tabs" id="projectTabs" role="tablist">
+        <!-- Nav Tabs personalizadas -->
+        <ul class="nav nav-tabs custom-tabs" id="projectTabs" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active" id="websites-tab" data-bs-toggle="tab" data-bs-target="#websites"
-              type="button" role="tab">Sitios Web</button>
+              type="button" role="tab">Websites</button>
           </li>
+
+          <!-- Separador </> -->
+          <li class="tab-separator">&lt;/&gt;</li>
+
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="catalogos-tab" data-bs-toggle="tab" data-bs-target="#catalogos" type="button"
-              role="tab">Catálogos Digitales</button>
+              role="tab">Digital catalogs</button>
           </li>
         </ul>
 
@@ -691,7 +695,6 @@
           <div class="tab-pane fade" id="catalogos" role="tabpanel">
             <div class="card-row">
 
-              <!-- Ejemplo de tarjeta de catálogo -->
               <div class="card">
                 <img src="assets/img/catalogo1.png" class="card-img-top" alt="Catálogo 1">
                 <div class="card-body">

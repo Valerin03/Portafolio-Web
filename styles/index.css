@@ -386,6 +386,10 @@ svg {
 /* Fin de la seccion de tecnologias */
 
 /* Inicio de proyectos */
+#tittle-myProjects{
+  margin-bottom: 30px !important;
+}
+
 .card-row {
   display: flex;
   gap: 2.5rem;
@@ -400,7 +404,6 @@ svg {
   height: 434px;
   background: var(--fond-cards);
   position: relative;
-  border-color: #B76FFF;
   transition: 0.5s ease-out;
   overflow: visible;
 }
@@ -446,7 +449,7 @@ svg {
 }
 
 .container-title {
-  background-color: #B76FFF;
+  background-color: var(--icon-fond);
   width: 50%;
   padding-left: 25px;
   padding-top: 7px;
@@ -502,6 +505,49 @@ svg {
   /* Unicode character for empty star */
   color: #D4BEE4;
   /* Filled star color */
+}
+
+/* Centrar las tabs */
+.custom-tabs {
+  display: flex;             /* Usar flexbox */
+  justify-content: center;   /* Centrar horizontalmente */
+  align-items: center;       /* Centrar verticalmente (opcional) */
+  border-bottom: none;       /* Quitar línea inferior de Bootstrap */
+  gap: 1rem;                 /* Espacio entre los botones y separador */
+  padding: 0;                /* Quitar padding extra */
+  list-style: none;          /* Quitar bullets de lista */
+}
+
+/* Botones de las tabs */
+.custom-tabs .nav-link {
+  color: #fff !important;
+  border: none !important;      /* Quitar bordes */
+  border-radius: 2rem;          /* Bordes redondeados */
+  padding: 0.5rem 1.5rem;       /* Ajustar tamaño */
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+/* Hover de botones */
+.custom-tabs .nav-link:hover {
+  background-color: #9a40e0; /* Color más oscuro al pasar el mouse */
+}
+
+/* Botón activo */
+.custom-tabs .nav-link.active {
+  border-bottom: 1px solid #7e2fb8 !important;
+  background: transparent;
+  border-radius: 0;
+}
+
+/* Separador </> */
+.tab-separator {
+  display: flex;
+  align-items: center;
+  color: #B76FFF;
+  font-weight: bold;
+  font-size: 1.2rem;
+  pointer-events: none; /* Que no sea clickeable */
 }
 
 /* Fin de proyectos */
