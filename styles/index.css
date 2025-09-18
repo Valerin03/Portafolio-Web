@@ -400,12 +400,15 @@ svg {
 }
 
 .card {
-  width: 400px !important;
+  width: 380px !important;
   height: 434px;
   background: var(--fond-cards);
   position: relative;
   transition: 0.5s ease-out;
   overflow: visible;
+  border-color: #b76fff93;
+  box-shadow: 0 0 10px #35204b, 0 0 20px #613a88;
+
 }
 
 .card-img-top {
@@ -475,6 +478,7 @@ svg {
 
 
 .rating {
+  padding-right: 20px !important;
   display: flex;
   flex-direction: row-reverse;
   /* Reverse the order of the stars */
@@ -489,7 +493,7 @@ svg {
 
 .rating label {
   font-size: 30px;
-  color: #D4BEE4;
+  color: #B76FFF;
   /* Empty star color */
   margin: 0 2px;
   cursor: pointer;
@@ -503,7 +507,7 @@ svg {
 .rating input[type="radio"]:checked~label:before {
   content: "\2606";
   /* Unicode character for empty star */
-  color: #D4BEE4;
+  color: #B76FFF;
   /* Filled star color */
 }
 
