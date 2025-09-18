@@ -387,10 +387,12 @@ svg {
 
 /* Inicio de proyectos */
 .card-row {
-  display: flex;          
-  gap: 2.5rem;            /* espacio entre cards */
-  justify-content: center; /* centra todo horizontalmente */
-  flex-wrap: wrap;        
+  display: flex;
+  gap: 2.5rem;
+  /* espacio entre cards */
+  justify-content: center;
+  /* centra todo horizontalmente */
+  flex-wrap: wrap;
 }
 
 .card {
@@ -412,6 +414,7 @@ svg {
   gap: .5em;
   display: grid;
   place-content: center;
+  padding: 0px !important;
 }
 
 .card-button {
@@ -437,11 +440,25 @@ svg {
 }
 
 /*Text*/
-.text-title {
-  font-size: 1.5em;
-  font-weight: bold;
+.card-title {
+  font-size: 18px;
+  color: var(--texto-principal);
 }
 
+.container-title {
+  background-color: #B76FFF;
+  width: 50%;
+  padding-left: 25px;
+  padding-top: 7px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.card-text{
+  color: var(--texto-principal);
+  padding-inline: 15px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
 /*Hover*/
 .card:hover {
   border-color: #B76FFF;
@@ -457,35 +474,36 @@ svg {
 .rating {
   display: flex;
   flex-direction: row-reverse;
- /* Reverse the order of the stars */
+  /* Reverse the order of the stars */
   font-size: 0;
- /* Remove the space between the elements */
+  /* Remove the space between the elements */
 }
 
 .rating input[type="radio"] {
   display: none;
- /* Hide the radio buttons */
+  /* Hide the radio buttons */
 }
 
 .rating label {
   font-size: 30px;
   color: #D4BEE4;
- /* Empty star color */
+  /* Empty star color */
   margin: 0 2px;
   cursor: pointer;
 }
 
 .rating label:before {
   content: "\2605";
- /* Unicode character for filled star */
+  /* Unicode character for filled star */
 }
 
-.rating input[type="radio"]:checked ~ label:before {
+.rating input[type="radio"]:checked~label:before {
   content: "\2606";
- /* Unicode character for empty star */
+  /* Unicode character for empty star */
   color: #D4BEE4;
- /* Filled star color */
+  /* Filled star color */
 }
+
 /* Fin de proyectos */
 
 

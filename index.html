@@ -593,76 +593,131 @@
       <section class="my-5" id="proyectos">
         <h3 class="fw-bold">My Projects</h3>
 
-        <h4 class="container-">Websites</h4>
-        <div class="card-row">
-          <div class="card">
-            <img src="assets/img/falcon_portada.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Falcon Limpieza</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                content.</p>
-              <div class="rating">
-                <input value="5" name="rating" id="star5" type="radio">
-                <label for="star5"></label>
-                <input value="4" name="rating" id="star4" type="radio">
-                <label for="star4"></label>
-                <input value="3" name="rating" id="star3" type="radio">
-                <label for="star3"></label>
-                <input value="2" name="rating" id="star2" type="radio">
-                <label for="star2"></label>
-                <input value="1" name="rating" id="star1" type="radio">
-                <label for="star1"></label>
+        <!-- Nav Tabs -->
+        <ul class="nav nav-tabs" id="projectTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="websites-tab" data-bs-toggle="tab" data-bs-target="#websites"
+              type="button" role="tab">Sitios Web</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="catalogos-tab" data-bs-toggle="tab" data-bs-target="#catalogos" type="button"
+              role="tab">Catálogos Digitales</button>
+          </li>
+        </ul>
+
+        <!-- Contenido de las Tabs -->
+        <div class="tab-content mt-4" id="projectTabsContent">
+
+          <!-- 🔹 Sitios Web -->
+          <div class="tab-pane fade show active" id="websites" role="tabpanel">
+            <div class="card-row">
+
+              <!-- Tarjeta Falcon -->
+              <div class="card">
+                <img src="assets/img/falcon_portada.png" class="card-img-top" alt="Falcon">
+                <div class="card-body">
+                  <div class="container-title">
+                    <h5 class="card-title">Falcon Limpieza</h5>
+                  </div>
+                  <p class="card-text">Some quick example text to build on the card title.</p>
+                  <div class="rating">
+                    <input value="5" name="rating1" id="star5-1" type="radio">
+                    <label for="star5-1"></label>
+                    <input value="4" name="rating1" id="star4-1" type="radio">
+                    <label for="star4-1"></label>
+                    <input value="3" name="rating1" id="star3-1" type="radio">
+                    <label for="star3-1"></label>
+                    <input value="2" name="rating1" id="star2-1" type="radio">
+                    <label for="star2-1"></label>
+                    <input value="1" name="rating1" id="star1-1" type="radio">
+                    <label for="star1-1"></label>
+                  </div>
+                  <a href="#" class="card-button">Visitar</a>
+                </div>
               </div>
-              <a href="#" class="card-button">Visitar</a>
+
+              <!-- Tarjeta SALI -->
+              <div class="card">
+                <img src="assets/img/sali_portada.png" class="card-img-top" alt="SALI">
+                <div class="card-body">
+                  <div class="container-title">
+                    <h5 class="card-title">SALI / Covao</h5>
+                  </div>
+                  <p class="card-text">Some quick example text to build on the card title.</p>
+                  <div class="rating">
+                    <input value="5" name="rating2" id="star5-2" type="radio">
+                    <label for="star5-2"></label>
+                    <input value="4" name="rating2" id="star4-2" type="radio">
+                    <label for="star4-2"></label>
+                    <input value="3" name="rating2" id="star3-2" type="radio">
+                    <label for="star3-2"></label>
+                    <input value="2" name="rating2" id="star2-2" type="radio">
+                    <label for="star2-2"></label>
+                    <input value="1" name="rating2" id="star1-2" type="radio">
+                    <label for="star1-2"></label>
+                  </div>
+                  <a href="#" class="card-button">Conocer más</a>
+                </div>
+              </div>
+
+              <!-- Tarjeta Pixel -->
+              <div class="card">
+                <img src="assets/img/portada_Pixel.png" class="card-img-top" alt="Pixel">
+                <div class="card-body">
+                  <div class="container-title">
+                    <h5 class="card-title">Pixel Design</h5>
+                  </div>
+                  <p class="card-text">Some quick example text to build on the card title.</p>
+                  <div class="rating">
+                    <input value="5" name="rating3" id="star5-3" type="radio">
+                    <label for="star5-3"></label>
+                    <input value="4" name="rating3" id="star4-3" type="radio">
+                    <label for="star4-3"></label>
+                    <input value="3" name="rating3" id="star3-3" type="radio">
+                    <label for="star3-3"></label>
+                    <input value="2" name="rating3" id="star2-3" type="radio">
+                    <label for="star2-3"></label>
+                    <input value="1" name="rating3" id="star1-3" type="radio">
+                    <label for="star1-3"></label>
+                  </div>
+                  <a href="#" class="card-button">Conocer más</a>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <div class="card">
-            <img src="assets/img/sali_portada.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">SALI</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                content.</p>
-              <div class="rating">
-                <input value="5" name="rating" id="star5" type="radio">
-                <label for="star5"></label>
-                <input value="4" name="rating" id="star4" type="radio">
-                <label for="star4"></label>
-                <input value="3" name="rating" id="star3" type="radio">
-                <label for="star3"></label>
-                <input value="2" name="rating" id="star2" type="radio">
-                <label for="star2"></label>
-                <input value="1" name="rating" id="star1" type="radio">
-                <label for="star1"></label>
-              </div>
-              <a href="#" class="card-button">Conocer más</a>
-            </div>
-          </div>
+          <!-- 🔹 Catálogos Digitales -->
+          <div class="tab-pane fade" id="catalogos" role="tabpanel">
+            <div class="card-row">
 
-          <div class="card">
-            <img src="assets/img/portada_Pixel.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Pixel</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                content.</p>
-              <div class="rating">
-                <input value="5" name="rating" id="star5" type="radio">
-                <label for="star5"></label>
-                <input value="4" name="rating" id="star4" type="radio">
-                <label for="star4"></label>
-                <input value="3" name="rating" id="star3" type="radio">
-                <label for="star3"></label>
-                <input value="2" name="rating" id="star2" type="radio">
-                <label for="star2"></label>
-                <input value="1" name="rating" id="star1" type="radio">
-                <label for="star1"></label>
+              <!-- Ejemplo de tarjeta de catálogo -->
+              <div class="card">
+                <img src="assets/img/catalogo1.png" class="card-img-top" alt="Catálogo 1">
+                <div class="card-body">
+                  <div class="container-title">
+                    <h5 class="card-title">Catálogo 1</h5>
+                  </div>
+                  <p class="card-text">Descripción del catálogo digital.</p>
+                  <a href="#" class="card-button">Ver Catálogo</a>
+                </div>
               </div>
-              <a href="#" class="card-button">Conocer más</a>
+
+              <div class="card">
+                <img src="assets/img/catalogo2.png" class="card-img-top" alt="Catálogo 2">
+                <div class="card-body">
+                  <div class="container-title">
+                    <h5 class="card-title">Catálogo 2</h5>
+                  </div>
+                  <p class="card-text">Otro ejemplo de catálogo digital.</p>
+                  <a href="#" class="card-button">Ver Catálogo</a>
+                </div>
+              </div>
+
             </div>
           </div>
 
         </div>
-
       </section>
 
       <!-- Referencias -->
