@@ -168,16 +168,19 @@ svg {
   }
 }
 
-.carousel {
-  width: 70%;
-}
+
 .carousel-indicators [data-bs-target] {
-  background-color: rgba(23, 3, 41, 1); /* tu color personalizado */
+  background-color: rgba(23, 3, 41, 1); 
+}
+
+#carouselExampleCaptions {
+  max-width: 1000px; 
+  margin: 0 auto; 
 }
 
 /* Color cuando está activo */
 .carousel-indicators .active {
-  background-color: #916BBF; /* púrpura de tu portafolio, por ejemplo */
+  background-color: #916BBF; 
 }
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='rgba(23, 3, 41, 1)' d='M5.25 0l-4 4 4 4L6 7.25 2.75 4 6 .75z'/%3E%3C/svg%3E");
@@ -193,6 +196,9 @@ svg {
   height: 1.5rem;
 }
 
+h2{
+  font-size: 44px;
+}
 footer {
   margin-top: auto;
   /* empuja el footer al final */
