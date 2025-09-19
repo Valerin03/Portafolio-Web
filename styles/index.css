@@ -367,9 +367,7 @@ svg {
 
 #tecnologias .row {
   row-gap: 0.6rem !important;
-  /* Menos espacio entre filas */
   column-gap: 0.6rem !important;
-  /* Menos espacio entre columnas */
   margin-bottom: 1rem;
 }
 
@@ -476,14 +474,12 @@ svg {
   opacity: 1;
 }
 
-
 .rating {
   padding-right: 20px !important;
   display: flex;
   flex-direction: row-reverse;
   /* Reverse the order of the stars */
   font-size: 0;
-  /* Remove the space between the elements */
 }
 
 .rating input[type="radio"] {
