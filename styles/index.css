@@ -254,7 +254,7 @@ svg {
 
 
 /* Inicio de proyectos */
-#tittle-myProjects{
+#tittle-myProjects {
   margin-bottom: 30px !important;
 }
 
@@ -327,12 +327,14 @@ svg {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.card-text{
+
+.card-text {
   color: var(--texto-principal);
   padding-inline: 15px;
   margin-bottom: 0px;
   margin-top: 5px;
 }
+
 /*Hover*/
 .card:hover {
   border-color: #B76FFF;
@@ -379,28 +381,39 @@ svg {
 
 /* Centrar las tabs */
 .custom-tabs {
-  display: flex;             /* Usar flexbox */
-  justify-content: center;   /* Centrar horizontalmente */
-  align-items: center;       /* Centrar verticalmente (opcional) */
-  border-bottom: none;       /* Quitar línea inferior de Bootstrap */
-  gap: 1rem;                 /* Espacio entre los botones y separador */
-  padding: 0;                /* Quitar padding extra */
-  list-style: none;          /* Quitar bullets de lista */
+  display: flex;
+  /* Usar flexbox */
+  justify-content: center;
+  /* Centrar horizontalmente */
+  align-items: center;
+  /* Centrar verticalmente (opcional) */
+  border-bottom: none;
+  /* Quitar línea inferior de Bootstrap */
+  gap: 1rem;
+  /* Espacio entre los botones y separador */
+  padding: 0;
+  /* Quitar padding extra */
+  list-style: none;
+  /* Quitar bullets de lista */
 }
 
 /* Botones de las tabs */
 .custom-tabs .nav-link {
   color: #fff !important;
-  border: none !important;      /* Quitar bordes */
-  border-radius: 2rem;          /* Bordes redondeados */
-  padding: 0.5rem 1.5rem;       /* Ajustar tamaño */
+  border: none !important;
+  /* Quitar bordes */
+  border-radius: 2rem;
+  /* Bordes redondeados */
+  padding: 0.5rem 1.5rem;
+  /* Ajustar tamaño */
   font-weight: 500;
   transition: 0.3s ease;
 }
 
 /* Hover de botones */
 .custom-tabs .nav-link:hover {
-  background-color: #9a40e0; /* Color más oscuro al pasar el mouse */
+  background-color: #9a40e0;
+  /* Color más oscuro al pasar el mouse */
 }
 
 /* Botón activo */
@@ -417,7 +430,8 @@ svg {
   color: #B76FFF;
   font-weight: bold;
   font-size: 1.2rem;
-  pointer-events: none; /* Que no sea clickeable */
+  pointer-events: none;
+  /* Que no sea clickeable */
 }
 
 /* Fin de proyectos */
@@ -474,10 +488,12 @@ svg {
 .pantalla {
   display: none;
 }
+
 .pantalla.activa {
   display: block;
 }
-/* Fin del navegador lateral */ 
+
+/* Fin del navegador lateral */
 main {
   flex: 1;
   /* ocupa el espacio restante entre header y footer */
@@ -649,93 +665,107 @@ footer {
 
 
 
-
+#imgTecnologias{
+  width: 70%;
+  height: 70%;
+}
 
 
 /* Estructura general */
-    .carousel-vertical-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      width: 200px;
-      margin: 40px auto;
-    }
+.carousel-vertical-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 40px auto;
+}
 
-    /* Carrusel */
-    #carouselVertical {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-    }
+/* Carrusel */
+#carouselVertical {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 15px !important;
+}
 
-    #carouselVertical .carousel-inner {
-      display: flex;
-      flex-direction: column;
-      height: 300px;
-    }
+#carouselVertical .carousel-inner {
+  display: flex;
+  flex-direction: column;
+  height: 285px;
+}
 
-    #carouselVertical .carousel-item {
-      transition: transform 0.6s ease-in-out;
-    }
+#carouselVertical .carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
 
-    #carouselVertical .carousel-item-next,
-    #carouselVertical .carousel-item-start.active {
-      transform: translateY(100%);
-    }
+#carouselVertical .carousel-item-next,
+#carouselVertical .carousel-item-start.active {
+  transform: translateY(100%);
+}
 
-    #carouselVertical .carousel-item-prev,
-    #carouselVertical .carousel-item-end.active {
-      transform: translateY(-100%);
-    }
+#carouselVertical .carousel-item-prev,
+#carouselVertical .carousel-item-end.active {
+  transform: translateY(-100%);
+}
 
-    /* Botones con tooltip */
-    .tooltip-btn {
-      position: relative;
-      width: 120px;
-    }
+/* Botones con tooltip */
+.tooltip-btn {
+  background: linear-gradient(92deg, rgba(145, 107, 191, 0.514) 27%, rgba(68, 50, 89, 0.089) 90%);
+  position: relative;
+  width: 220px;
+  border-radius: 60px;
+  color: #B76FFF;
+  font-weight: 500;
+  border: #B76FFF 1px solid;
+}
 
-    .tooltip-btn::before {
-      content: attr(data-tooltip);
-      position: absolute;
-      left: -35px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #000;
-      color: #fff;
-      padding: 3px 8px;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s, transform 0.3s;
-    }
+.tooltip-btn:hover {
+  background: #B76FFF;
+  color: #fff;
+  border: #D1A3FF 1px solid;
+  box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
+  width: 120px;
+  align-items: center !important;
+}
 
-    .tooltip-btn:hover::before {
-      opacity: 1;
-      transform: translateY(-50%) translateX(-5px);
-    }
+.tooltip-btn::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: -75px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #B76FFF;
+  color: #fff;
+  border: #D1A3FF 1px solid;
+  padding: 6px 16px;
+  border-radius: 60px;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
 
-    /* Flechas */
-    .carousel-arrow {
-      background-color: rgba(0,0,0,0.4);
-      border: none;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+}
 
-    .carousel-arrow:hover {
-      background-color: rgba(0,0,0,0.6);
-    }
+.tooltip-btn:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-5px);
+}
 
-    .carousel-arrow svg {
-      width: 1rem;
-      height: 1rem;
-      stroke: white;
-    }
+.carousel-arrow {
+  background-color: transparent;
+  border: none;
+  border-radius: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.carousel-arrow svg {
+  width: 2rem;
+  height: 2rem;
+  stroke: #D1A3FF;
+}
