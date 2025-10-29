@@ -252,136 +252,6 @@ svg {
   filter: drop-shadow(0 0 5px #B76FFF) brightness(1.5);
 }
 
-/* Inicio de la seccion de tecnologias */
-.badge {
-  position: relative;
-  border: 2px solid #916BBF;
-  background-color: #170329;
-  color: #fff;
-  padding: 0.6rem 1rem;
-  /* Compactamos */
-  font-size: 0.9rem;
-  font-weight: 500;
-  border-radius: 0.5rem;
-  cursor: default;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100px;
-  /* Más compacto */
-  min-height: 45px;
-  margin: 0.2rem;
-  /* Menos espacio entre badges */
-  text-align: center;
-  transition: all 0.3s ease-in-out;
-}
-
-.badge:hover {
-  border-color: #B76FFF;
-  box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
-  transform: translateY(-3px);
-}
-
-/* Tooltip */
-.badge .tooltip {
-  position: absolute;
-  top: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #916BBF;
-  color: #fff;
-  padding: 4px 10px;
-  font-size: 0.8rem;
-  border-radius: 6px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease-in-out;
-  white-space: nowrap;
-  z-index: 10;
-}
-
-.badge .tooltip::before {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  width: 8px;
-  height: 8px;
-  background: #916BBF;
-}
-
-.badge:hover .tooltip {
-  opacity: 1;
-  top: -50px;
-}
-
-.icon-badge {
-  padding-right: 10px;
-}
-
-/* Máquina de escribir */
-#cargando {
-  font-family: "Special Elite", system-ui;
-  color: #ffffff;
-  border-right: 2px solid #B76FFF;
-  overflow: hidden;
-  display: inline-block;
-}
-
-
-.frontend-flow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  /* Reducimos espacio entre pasos y flechas */
-  margin-bottom: 2rem;
-  /* Espacio debajo del gráfico */
-  margin-top: 1.5rem;
-}
-
-
-.step {
-  text-align: center;
-  color: #fff;
-  font-size: 0.9rem;
-  /* Texto más compacto */
-}
-
-.step svg {
-  color: #916BBF;
-  text-shadow: 0 0 10px #916BBF, 0 0 20px #916BBF;
-  margin-bottom: 0.3rem;
-  /* Ícono más cerca del texto */
-}
-
-.arrow {
-  font-size: 1.2rem;
-  color: #916BBF;
-  text-shadow: 0 0 8px #916BBF;
-  margin: 0 -4px;
-  /* Flechas más pegadas */
-}
-
-
-#tecnologias .row {
-  row-gap: 0.6rem !important;
-  column-gap: 0.6rem !important;
-  margin-bottom: 1rem;
-}
-
-#tecnologias .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#container-tecnologias {
-  margin-top: 10px;
-}
-
-/* Fin de la seccion de tecnologias */
 
 /* Inicio de proyectos */
 #tittle-myProjects{
@@ -553,7 +423,7 @@ svg {
 /* Fin de proyectos */
 
 
-/* Navegador lateral */
+
 /* Navegador inferior centrado */
 .nav-lateral {
   position: fixed;
@@ -593,8 +463,6 @@ svg {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
-
 
 
 
@@ -777,3 +645,97 @@ footer {
   color: inherit;
 }
 
+
+
+
+
+
+
+
+/* Estructura general */
+    .carousel-vertical-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      width: 200px;
+      margin: 40px auto;
+    }
+
+    /* Carrusel */
+    #carouselVertical {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #carouselVertical .carousel-inner {
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+    }
+
+    #carouselVertical .carousel-item {
+      transition: transform 0.6s ease-in-out;
+    }
+
+    #carouselVertical .carousel-item-next,
+    #carouselVertical .carousel-item-start.active {
+      transform: translateY(100%);
+    }
+
+    #carouselVertical .carousel-item-prev,
+    #carouselVertical .carousel-item-end.active {
+      transform: translateY(-100%);
+    }
+
+    /* Botones con tooltip */
+    .tooltip-btn {
+      position: relative;
+      width: 120px;
+    }
+
+    .tooltip-btn::before {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: -35px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #000;
+      color: #fff;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .tooltip-btn:hover::before {
+      opacity: 1;
+      transform: translateY(-50%) translateX(-5px);
+    }
+
+    /* Flechas */
+    .carousel-arrow {
+      background-color: rgba(0,0,0,0.4);
+      border: none;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .carousel-arrow:hover {
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .carousel-arrow svg {
+      width: 1rem;
+      height: 1rem;
+      stroke: white;
+    }
