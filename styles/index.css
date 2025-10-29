@@ -554,24 +554,32 @@ svg {
 
 
 /* Navegador lateral */
+/* Navegador inferior centrado */
 .nav-lateral {
   position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
 }
 
+/* Cambia de lista vertical a horizontal */
 .nav-lateral ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   list-style: none;
-  padding: 0;
+  padding: 10px 20px;
   margin: 0;
+  border-radius: 50px;
 }
 
+/* Espaciado horizontal entre iconos */
 .nav-lateral li {
-  margin: 12px 0;
+  margin: 0 12px;
 }
 
+/* Botones redondos iguales que antes */
 .nav-lateral a {
   position: relative;
   display: flex;
@@ -579,113 +587,29 @@ svg {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #916BBF63;
-  /* fondo semitransparente */
   color: #fff;
-  border: 2px solid #916BBF;
-  /* borde que brillará */
   border-radius: 50%;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-/* Ícono */
-.nav-lateral a .icon {
-  font-size: 18px;
-  color: #916BBF;
-  /* mismo color que el borde */
-  transition: all 0.3s ease;
-  text-shadow: none;
-  /* por defecto sin brillo */
-}
 
-/* Texto flotante oculto */
-.nav-lateral a .text {
-  font-family: "Special Elite", system-ui;
-  font-weight: 500;
-  position: absolute;
-  right: 100%;
-  margin-right: 10px;
-  background: var(--icon-fond);
-  color: #B76FFF;
-  padding: 6px 12px;
-  border-radius: 20px;
-  border-bottom-right-radius: 5px;
-  font-size: 15px;
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateX(10px);
-  transition: all 0.3s ease;
-  pointer-events: none;
-}
 
-/* Hover → muestra el texto */
-.nav-lateral a:hover .text {
-  opacity: 1;
-  transform: translateX(0);
-  border-color: #B76FFF;
-  /* borde brillante */
-  box-shadow:
-    0 0 5px #B76FFF,
-    0 0 10px #B76FFF,
-    0 0 15px #B76FFF;
-}
 
-/* Hover y activo → borde e ícono brillan */
-.nav-lateral a:hover,
-.nav-lateral a.active {
-  border-color: #B76FFF;
-  /* borde brillante */
-  box-shadow:
-    0 0 5px #B76FFF,
-    0 0 10px #B76FFF,
-    0 0 15px #B76FFF;
-  /* glow del borde */
-}
-
-.nav-lateral a:hover .icon,
-.nav-lateral a.active .icon {
-  color: #B76FFF;
-  /* mismo color que el borde */
-  text-shadow:
-    0 0 5px #B76FFF,
-    0 0 10px #B76FFF,
-    0 0 15px #B76FFF;
-  /* glow del ícono */
-}
-
-/* Animación sutil de brillo del borde e ícono */
-@keyframes glow {
-
-  0%,
-  100% {
-    box-shadow:
-      0 0 5px #B76FFF,
-      0 0 10px #B76FFF,
-      0 0 15px #B76FFF;
-  }
-
-  50% {
-    box-shadow:
-      0 0 8px #B76FFF,
-      0 0 16px #B76FFF,
-      0 0 24px #B76FFF;
-  }
-}
 
 .nav-lateral a:hover {
   animation: glow 1.5s infinite alternate;
 }
 
+/* Control de pantallas (igual que antes) */
 .pantalla {
   display: none;
 }
-
 .pantalla.activa {
   display: block;
 }
-
+/* Fin del navegador lateral */ 
 main {
   flex: 1;
   /* ocupa el espacio restante entre header y footer */
@@ -766,3 +690,90 @@ footer {
   margin-top: auto;
   /* empuja el footer al final */
 }
+
+
+
+.menu-inferior {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+  z-index: 1000;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+
+.menu-inferior .icon {
+  position: relative;
+  background: #170329;
+  border: 2px solid #916BBF;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  color: #916BBF;
+  cursor: pointer;
+}
+
+.menu-inferior .icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+}
+
+.menu-inferior .tooltip {
+  position: absolute;
+  bottom: 60px;
+  background: #170329;
+  color: #B76FFF;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-family: "Special Elite", system-ui;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border: 1px solid #B76FFF;
+}
+
+.menu-inferior .tooltip::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background: #170329;
+  border-bottom: 1px solid #B76FFF;
+  border-right: 1px solid #B76FFF;
+}
+
+.menu-inferior .icon:hover .tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-inferior .icon:hover {
+  border-color: #B76FFF;
+  box-shadow: 0 0 10px #B76FFF;
+  color: #B76FFF;
+}
+
+.menu-inferior .icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
