@@ -729,6 +729,8 @@ footer {
   align-items: center !important;
 }
 
+
+/*
 .tooltip-btn::before {
   content: attr(data-tooltip);
   position: absolute;
@@ -752,6 +754,8 @@ footer {
   opacity: 1;
   transform: translateY(-50%) translateX(-5px);
 }
+*/
+
 
 .carousel-arrow {
   background-color: transparent;
