@@ -43,163 +43,172 @@ body {
   /* no bloquea clicks */
 }
 
-svg {
-  color: var(--icons-innactivo);
+
+
+:root {
+  --accent: #916BBF;
+  --accent-dark: #734fa8;
+  --btn-height: 40px;
+  --btn-min-width: 140px;
 }
 
-/* Navegador lateral */
-.nav-lateral {
+.btn-esquina {
+  z-index: 9999;
   position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
-
-.nav-lateral ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-lateral li {
-  margin: 12px 0;
-}
-
-.nav-lateral a {
-  position: relative;
+  top: 15px;
+  left: 15px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #916BBF63;
-  /* fondo semitransparente */
-  color: #fff;
-  border: 2px solid #916BBF;
-  /* borde que brillará */
-  border-radius: 50%;
+  gap: 12px;
+  padding: 8px 8px;
+  min-width: var(--btn-min-width);
+  height: var(--btn-height);
+  background: var(--accent);
+  color: #ffffff;
   text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  box-sizing: border-box;
+  overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s ease;
+  /* transición para que el centrado y padding sea suave */
+  transition: padding 0.32s ease, background-color 0.32s ease, justify-content 0.32s ease;
 }
 
-/* Ícono */
-.nav-lateral a .icon {
-  font-size: 18px;
-  color: #916BBF;
-  /* mismo color que el borde */
-  transition: all 0.3s ease;
-  text-shadow: none;
-  /* por defecto sin brillo */
+/* Icono (visible siempre) */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--accent);
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  /* transiciones para tamaño, color y radio */
+  transition:
+    width 0.36s cubic-bezier(.2, .9, .2, 1),
+    height 0.36s cubic-bezier(.2, .9, .2, 1),
+    background-color 0.28s ease,
+    color 0.28s ease,
+    border-radius 0.36s ease,
+    transform 0.36s ease,
+    opacity 0.22s ease;
 }
 
-/* Texto flotante oculto */
-.nav-lateral a .text {
-  font-family: "Special Elite", system-ui;
-  font-weight: 500;
-  position: absolute;
-  right: 100%;
-  margin-right: 10px;
-  background: var(--icon-fond);
-  color: #B76FFF;
-  padding: 6px 12px;
-  border-radius: 20px;
-  border-bottom-right-radius: 5px;
-  font-size: 15px;
+.btn-icon .icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.btn-text {
+  transition: opacity 0.22s ease, transform 0.32s ease;
   white-space: nowrap;
-  opacity: 0;
-  transform: translateX(10px);
-  transition: all 0.3s ease;
-  pointer-events: none;
+  display: inline-block;
 }
 
-/* Hover → muestra el texto */
-.nav-lateral a:hover .text {
-  opacity: 1;
-  transform: translateX(0);
-  border-color: #B76FFF;
-  /* borde brillante */
-  box-shadow:
-    0 0 5px #B76FFF,
-    0 0 10px #B76FFF,
-    0 0 15px #B76FFF;
-}
 
-/* Hover y activo → borde e ícono brillan */
-.nav-lateral a:hover,
-.nav-lateral a.active {
-  border-color: #B76FFF;
-  /* borde brillante */
-  box-shadow:
-    0 0 5px #B76FFF,
-    0 0 10px #B76FFF,
-    0 0 15px #B76FFF;
-  /* glow del borde */
-}
 
-.nav-lateral a:hover .icon,
-.nav-lateral a.active .icon {
-  color: #B76FFF;
-  /* mismo color que el borde */
-  text-shadow:
-    0 0 5px #B76FFF,
-    0 0 10px #B76FFF,
-    0 0 15px #B76FFF;
-  /* glow del ícono */
-}
-
-/* Animación sutil de brillo del borde e ícono */
-@keyframes glow {
-
-  0%,
-  100% {
-    box-shadow:
-      0 0 5px #B76FFF,
-      0 0 10px #B76FFF,
-      0 0 15px #B76FFF;
-  }
-
-  50% {
-    box-shadow:
-      0 0 8px #B76FFF,
-      0 0 16px #B76FFF,
-      0 0 24px #B76FFF;
+/* Opcional: versión más compacta en pantallas pequeñas */
+@media (max-width:420px) {
+  .btn-esquina {
+    left: 10px;
+    top: 10px;
+    min-width: 140px;
+    padding: 8px 14px;
   }
 }
 
 
-.carousel-indicators [data-bs-target] {
-  background-color: rgba(23, 3, 41, 1); 
-}
 
-#carouselExampleCaptions {
-  max-width: 1000px; 
-  margin: 0 auto; 
-}
-
-/* Color cuando está activo */
-.carousel-indicators .active {
-  background-color: #916BBF; 
-}
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='rgba(23, 3, 41, 1)' d='M5.25 0l-4 4 4 4L6 7.25 2.75 4 6 .75z'/%3E%3C/svg%3E");
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='rgba(23, 3, 41, 1)' d='M2.75 0l4 4-4 4L2 7.25 5.25 4 2 .75z'/%3E%3C/svg%3E");
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-h2{
-  font-size: 44px;
-}
 footer {
   margin-top: auto;
   /* empuja el footer al final */
+}
+
+
+
+.carousel-item {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.titulo {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.tags {
+  margin-bottom: 25px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: rgba(145, 107, 191, 0.2);
+  color: #cba6f7;
+  border: 1px solid #916BBF;
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin: 5px;
+  font-size: 0.9rem;
+}
+
+.mockup {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 60px;
+  overflow: hidden;
+}
+
+.contenido {
+  position: relative;
+  /* permite posicionar el botón dentro */
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 40px 20px 20px;
+  /* más espacio arriba */
+  margin: 35px auto 0;
+  max-width: 800px;
+  backdrop-filter: blur(6px);
+}
+
+.btn-inicio {
+  position: absolute;
+  top: -18px;
+  /* flota sobre el borde */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #916BBF;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(145, 107, 191, 0.5);
+  z-index: 2;
+}
+
+.btn-inicio:hover {
+  background-color: #a67df7;
+  color: #fff;
+}
+
+/* Flechas personalizadas */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 8%;
+  background: transparent !important;
 }
