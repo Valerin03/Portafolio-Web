@@ -63,7 +63,6 @@ body {
   padding: 8px 8px;
   min-width: var(--btn-min-width);
   height: var(--btn-height);
-  background: var(--accent);
   color: #ffffff;
   text-decoration: none;
   border-radius: 999px;
@@ -71,7 +70,6 @@ body {
   box-sizing: border-box;
   overflow: hidden;
   cursor: pointer;
-  /* transición para que el centrado y padding sea suave */
   transition: padding 0.32s ease, background-color 0.32s ease, justify-content 0.32s ease;
 }
 
@@ -83,8 +81,8 @@ body {
   width: 36px;
   height: 30px;
   border-radius: 50%;
-  background: #ffffff;
-  color: var(--accent);
+  background: #B76FFF;
+  color: #ffffff;
   flex-shrink: 0;
   box-sizing: border-box;
 
@@ -149,20 +147,20 @@ footer {
 
 .tag {
   display: inline-block;
-  background-color: rgba(145, 107, 191, 0.2);
-  color: #cba6f7;
-  border: 1px solid #916BBF;
+  border: 1px solid #B16BF7;
+  background:transparent ;
+  color: #B16BF7;
   border-radius: 8px;
   padding: 6px 14px;
   margin: 5px;
-  font-size: 0.9rem;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .mockup {
   max-width: 1000px;
   margin: 0 auto;
-  border-bottom-right-radius: 60px;
-  border-bottom-left-radius: 60px;
+  border-radius: 25px;
   overflow: hidden;
 }
 
@@ -170,33 +168,34 @@ footer {
   position: relative;
   /* permite posicionar el botón dentro */
   background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #B76FFF;
   border-radius: 12px;
   padding: 40px 20px 20px;
   /* más espacio arriba */
-  margin: 35px auto 0;
+  margin: 55px auto 0;
   max-width: 800px;
   backdrop-filter: blur(6px);
 }
 
-.btn-inicio {
+.btn-seccion {
   position: absolute;
-  top: -18px;
+  top: -20px;
   /* flota sobre el borde */
   left: 50%;
   transform: translateX(-50%);
-  background-color: #916BBF;
+  background-color: #B76FFF;
   color: #fff;
   font-weight: 600;
   padding: 8px 24px;
   border-radius: 20px;
+  border: 1px solid #D1A3FF;
   text-decoration: none;
-  box-shadow: 0 0 15px rgba(145, 107, 191, 0.5);
+  box-shadow: 0px 0px 32px 7px #B76FFF;
   z-index: 2;
 }
 
-.btn-inicio:hover {
-  background-color: #a67df7;
+.btn-seccion:hover {
+  background-color: #D1A3FF;
   color: #fff;
 }
 
@@ -209,6 +208,6 @@ footer {
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 8%;
+  width: 20%;
   background: transparent !important;
 }
