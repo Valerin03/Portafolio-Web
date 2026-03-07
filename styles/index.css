@@ -437,17 +437,16 @@ svg {
 /* Fin de proyectos */
 
 
-
 /* Navegador inferior centrado */
 .nav-lateral {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
+ position: static; /* o eliminar position */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
 }
 
-/* Cambia de lista vertical a horizontal */
+/* Barra del menú */
 .nav-lateral ul {
   display: flex;
   justify-content: center;
@@ -456,6 +455,8 @@ svg {
   padding: 10px 20px;
   margin: 0;
   border-radius: 50px;
+  background: transparent;
+  backdrop-filter: blur(10px);
 }
 
 /* Espaciado horizontal entre iconos */
@@ -463,14 +464,14 @@ svg {
   margin: 0 12px;
 }
 
-/* Botones redondos iguales que antes */
+/* Botones redondos */
 .nav-lateral a {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   color: #fff;
   border-radius: 50%;
   text-decoration: none;
@@ -478,13 +479,24 @@ svg {
   transition: all 0.3s ease;
 }
 
-
-
+/* Hover */
 .nav-lateral a:hover {
+  background: #916bbf48;
+  transform: translateY(-1px) scale(1.1);
   animation: glow 1.5s infinite alternate;
 }
 
-/* Control de pantallas (igual que antes) */
+/* Animación glow */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #916BBF;
+  }
+  to {
+    box-shadow: 0 0 20px #916BBF, 0 0 30px #916BBF;
+  }
+}
+
+/* Control de pantallas */
 .pantalla {
   display: none;
 }
@@ -493,10 +505,10 @@ svg {
   display: block;
 }
 
-/* Fin del navegador lateral */
+/* Contenido principal */
 main {
   flex: 1;
-  /* ocupa el espacio restante entre header y footer */
+  padding-bottom: 10px; /* espacio para el menú inferior */
 }
 
 .main-content {
