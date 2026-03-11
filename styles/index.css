@@ -671,23 +671,46 @@ footer {
 
 
 /*Inicio de Sección Tecnologías*/
+.carousel-inner{
+  padding-block: 50px;
+}
 
+#skillsCarousel{
+  width: 100%;
+  height: 70% !important;
+}
 .skill-card{
   background: rgba(255,255,255,0.05);
   border: 2px solid #916BBF;
-  border-radius: 20px;
-  padding: 30px;
-  color: #916BBF;
+  border-radius: 50px;
+  padding: 50px 30px;
+  max-width: 220px;
+  height: 240px;
+  margin: auto;
   transition: 0.3s;
 }
 
+.skill-card img{
+  width: 70px;
+  margin-bottom: 35px;
+}
+
+.skill-card p{
+  font-size: 1.2rem;
+}
 .skill-card:hover{
   box-shadow: 0 0 20px #916BBF;
   transform: translateY(-5px);
 }
-
-.img-fluid{
-  width: 50px;
-  padding-bottom: 15px;
+.carousel-control-prev{
+  left: -80px;
+  color: #916BBF !important;
 }
+
+.carousel-control-next{
+  right: -80px;
+  color: #916BBF !important;
+}
+
+
 /* Fin de Sección Tecnologías*/
