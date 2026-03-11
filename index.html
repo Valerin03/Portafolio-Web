@@ -211,75 +211,99 @@
       <!-- Tecnologías -->
       <section id="tecnologias" class="py-5 text-center">
         <div class="container">
-
           <div class="row">
-            <div class="col-6 d-flex justify-content-center align-items-center flex-column">
-              <h2 class="fw-bold mb-5" style="color: #fff">Tecnologías</h2>
-              <img id="imgTecnologias" src="assets/img/tecnologies.svg" alt="#">
-            </div>
+            <h2 class="fw-bold mb-5" style="color: #fff">Tecnologías</h2>
+          </div>
 
-            <div class="col-6 d-flex justify-content-center align-items-center flex-column">
-              <div class="carousel-vertical-container">
-                <!-- Flecha arriba -->
-                <button class="carousel-arrow" data-bs-target="#carouselVertical" data-bs-slide="prev">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 15l-7-7-7 7" />
-                  </svg>
-                </button>
+          <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="container">
+                  <div class="row justify-content-center">
 
-                <!-- Carrusel -->
-                <div id="carouselVertical" class="carousel slide" data-bs-ride="false">
-                  <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                      <div class="d-flex flex-column align-items-center gap-3 py-3">
-                        <button class="btn tooltip-btn" data-tooltip="100%">HTML</button>
-                        <button class="btn tooltip-btn" data-tooltip="100%">CSS</button>
-                        <button class="btn tooltip-btn" data-tooltip="86%">JavaScript</button>
-                        <button class="btn tooltip-btn" data-tooltip="95%">Figma</button>
-                        <button class="btn tooltip-btn" data-tooltip="100%">Bootstrap</button>
-                        <button class="btn tooltip-btn" data-tooltip="95%">WebFlow</button>
-                      </div>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="carousel-item">
-                      <div class="d-flex flex-column align-items-center gap-3 py-3">
-                        <button class="btn  tooltip-btn" data-tooltip="95%">WordPress</button>
-                        <button class="btn  tooltip-btn" data-tooltip="85%">MVC</button>
-                        <button class="btn  tooltip-btn" data-tooltip="70%">PHP</button>
-                        <button class="btn  tooltip-btn" data-tooltip="75%">C#</button>
-                        <button class="btn  tooltip-btn" data-tooltip="75%">Java</button>
-                        <button class="btn  tooltip-btn" data-tooltip="80%">MySQL</button>
-                        <button class="btn  tooltip-btn" data-tooltip="80%">SQL Server</button>
-                        <button class="btn  tooltip-btn" data-tooltip="100%">Elementor</button>
+                    <div class="col-12 col-md-3">
+                      <div class="skill-card text-center">
+                        <img src="assets/icons/html5.svg" class="img-fluid" alt="HTML">
+                        <p>HTML</p>
                       </div>
                     </div>
 
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                      <div class="d-flex flex-column align-items-center gap-3 py-3">
-                        <button class="btn  tooltip-btn" data-tooltip="80%">MySQL</button>
-                        <button class="btn  tooltip-btn" data-tooltip="80%">SQL Server</button>
-                        <button class="btn  tooltip-btn" data-tooltip="100%">Elementor</button>
-                        <button class="btn  tooltip-btn" data-tooltip="100%">Scrum</button>
-
+                    <div class="col-12 col-md-3 d-none d-md-block">
+                      <div class="skill-card text-center">
+                        <img src="assets/icons/css_old.svg" class="img-fluid" alt="CSS">
+                        <p>CSS</p>
                       </div>
                     </div>
+
+                    <div class="col-12 col-md-3 d-none d-md-block">
+                      <div class="skill-card text-center">
+                        <img src="assets/icons/javascript.svg" class="img-fluid" alt="JS">
+                        <p>JavaScript</p>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-3 d-none d-md-block">
+                      <div class="skill-card text-center">
+                        <img src="figma.png" class="img-fluid" alt="Figma">
+                        <p>Figma</p>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
-                <!-- Efecto máquina de escribir -->
-                <p id="cargando" class="mt-4"></p>
-
-                <!-- Flecha abajo -->
-                <button class="carousel-arrow" data-bs-target="#carouselVertical" data-bs-slide="next">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 9l7 7 7-7" />
-                  </svg>
-                </button>
               </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item active">
+                <div class="container">
+                  <div class="row justify-content-center">
+
+                    <div class="col-12 col-md-3">
+                      <div class="skill-card text-center">
+                        <img src="html.png" class="img-fluid" alt="bootstrap">
+                        <p>Bootstrap</p>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-3 d-none d-md-block">
+                      <div class="skill-card text-center">
+                        <img src="css.png" class="img-fluid" alt="webflow">
+                        <p>WebFlow</p>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-3 d-none d-md-block">
+                      <div class="skill-card text-center">
+                        <img src="js.png" class="img-fluid" alt="wordpress">
+                        <p>WordPress</p>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-3 d-none d-md-block">
+                      <div class="skill-card text-center">
+                        <img src="figma.png" class="img-fluid" alt="MVC">
+                        <p>MVC</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
             </div>
 
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#skillsCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#skillsCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+
           </div>
+        </div>
       </section>
 
       <!-- Proyectos -->
@@ -568,7 +592,7 @@
   </nav>
 
 
-  <!-- 
+
   <footer class="text-center py-4" style="border-top: 1px solid #916bbf33">
     <p style="
           font-family: 'Special Elite', system-ui;
@@ -581,7 +605,7 @@
       &copy; 2025 - All rights reserved
     </p>
   </footer>
--->
+
 
   <script src="js/nav.js"></script>
   <script src="js/fond.js"></script>
