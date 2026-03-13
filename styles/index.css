@@ -711,6 +711,12 @@ footer {
   right: -80px;
   color: #916BBF !important;
 }
-
+/* Mobile */
+@media (max-width: 768px){
+  .carousel-control-prev,
+  .carousel-control-next{
+    display: block !important; 
+  }
+}
 
 /* Fin de Sección Tecnologías*/
