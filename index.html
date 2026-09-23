@@ -210,99 +210,39 @@
 
       <!-- Tecnologías -->
       <section id="tecnologias" class="py-5 text-center">
-        <div class="container">
-          <div class="row">
-            <h2 class="fw-bold mb-5" style="color: #fff">Tecnologías</h2>
+        <div class="row">
+          <h2 class="fw-bold mb-5" style="color: #fff">Tecnologías</h2>
+        </div>
+        <div id="carouselTecnologias" class="carousel slide" data-bs-touch="false">
+
+          <div class="carousel-inner" id="carouselTecnologiasInner">
+            <!-- JavaScript colocará las tarjetas aquí -->
           </div>
 
-          <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <!-- Slide 1 -->
-              <div class="carousel-item active">
-                <div class="container">
-                  <div class="row justify-content-center ">
+          <!-- BOTÓN ANTERIOR -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselTecnologias"
+            data-bs-slide="prev">
 
-                    <div class="col-12 col-md-3">
-                      <div class="skill-card text-center">
-                        <img src="assets/icons/html5.svg" class="img-fluid" alt="HTML">
-                        <p>HTML</p>
-                      </div>
-                    </div>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
-                    <div class="col-12 col-md-3 d-none d-md-block">
-                      <div class="skill-card text-center">
-                        <img src="assets/icons/css_old.svg" class="img-fluid" alt="CSS">
-                        <p>CSS</p>
-                      </div>
-                    </div>
+            <span class="visually-hidden">
+              Anterior
+            </span>
 
-                    <div class="col-12 col-md-3 d-none d-md-block">
-                      <div class="skill-card text-center">
-                        <img src="assets/icons/javascript.svg" class="img-fluid" alt="JS">
-                        <p>JavaScript</p>
-                      </div>
-                    </div>
+          </button>
 
-                    <div class="col-12 col-md-3 d-none d-md-block">
-                      <div class="skill-card text-center">
-                        <img src="assets/icons/figma.svg" class="img-fluid" alt="Figma">
-                        <p>Figma</p>
-                      </div>
-                    </div>
+          <!-- BOTÓN SIGUIENTE -->
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselTecnologias"
+            data-bs-slide="next">
 
-                  </div>
-                </div>
-              </div>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
 
-              <!-- Slide 2 -->
-              <div class="carousel-item active">
-                <div class="container">
-                  <div class="row justify-content-center">
+            <span class="visually-hidden">
+              Siguiente
+            </span>
 
-                    <div class="col-12 col-md-3">
-                      <div class="skill-card text-center">
-                        <img src="assets/icons/bootstrap.svg" class="img-fluid" alt="bootstrap">
-                        <p>Bootstrap</p>
-                      </div>
-                    </div>
+          </button>
 
-                    <div class="col-12 col-md-3 d-none d-md-block">
-                      <div class="skill-card text-center">
-                        <img src="assets/icons/webflow.svg" class="img-fluid" alt="webflow">
-                        <p>WebFlow</p>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-md-3 d-none d-md-block">
-                      <div class="skill-card text-center">
-                        <img src="assets/icons/wordpress.svg" class="img-fluid" alt="wordpress">
-                        <p>WordPress</p>
-                      </div>
-                    </div>
-
-                    <div class="col-12 col-md-3 d-none d-md-block">
-                      <div class="skill-card text-center">
-                        <img src="figma.png" class="img-fluid" alt="MVC">
-                        <p>MVC</p>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- Controles -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#skillsCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#skillsCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-
-          </div>
         </div>
       </section>
 
@@ -491,6 +431,8 @@
     </main>
   </div>
 
+
+  <!-- Menu de navegación -->
   <nav class="nav-lateral">
     <ul class="menu-inferior">
       <li class="icon home">
@@ -561,11 +503,14 @@
     </p>
   </footer>
 
-
+  
   <script src="js/nav.js"></script>
   <script src="js/fond.js"></script>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/cargarmas.js"></script>
+  <script src="js/tecnología.js"></script>
+
+</body>
 </body>
 
 </html>
