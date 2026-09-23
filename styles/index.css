@@ -19,7 +19,7 @@ body {
 }
 
 body {
-font-family: "Special Elite", system-ui;
+  font-family: "Special Elite", system-ui;
   background: radial-gradient(circle, rgba(23, 3, 41, 1) 57%, rgba(0, 0, 0, 1) 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -43,6 +43,11 @@ font-family: "Special Elite", system-ui;
 
 svg {
   color: var(--icons-innactivo);
+}
+
+.img_avatar {
+  width: 80%;
+  height: 90%;
 }
 
 
@@ -81,13 +86,30 @@ svg {
     hideCursor 0s 4.1s forwards;
 }
 
-/* 3. "Y soy desarrolladora web FrontEnd" - 33 caracteres */
-.h2-type {
+/* 3. "I create digital experiences through web development, design & photography." - 75 caracteres */
+.h2-line1,
+.h2-line2 {
   width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  border-right: 2px solid transparent;
+}
+
+/* Primera línea */
+.h2-line1 {
   animation:
-    showCursorH2 0s 4.2s forwards,
-    typingH2 3.5s steps(33, end) 4.2s forwards,
-    hideCursor 0s 7.7s forwards;
+    showCursorH2Line1 0s 4.2s forwards,
+    typingH2Line1 2.8s steps(36, end) 4.2s forwards,
+    hideCursorLine1 0s 7s forwards;
+}
+
+/* Segunda línea */
+.h2-line2 {
+  animation:
+    showCursorH2Line2 0s 7.1s forwards,
+    typingH2Line2 3s steps(39, end) 7.1s forwards,
+    hideCursorLine2 0s 10.1s forwards;
 }
 
 /* Cursor aparece */
@@ -143,7 +165,7 @@ svg {
   }
 
   to {
-    width: 33ch;
+    width: 75ch;
   }
 }
 
@@ -153,6 +175,57 @@ svg {
   border-radius: 200px;
   border: 4px solid #916BBF;
   box-shadow: 0 0 10px #B76FFF, 0 0 20px #B76FFF;
+}
+
+/* Cursor primera línea */
+@keyframes showCursorH2Line1 {
+  to {
+    border-right: 2px solid #B76FFF;
+  }
+}
+
+/* Escritura primera línea */
+@keyframes typingH2Line1 {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 36ch;
+  }
+}
+
+/* Ocultar cursor primera línea */
+@keyframes hideCursorLine1 {
+  to {
+    border-right: 2px solid transparent;
+  }
+}
+
+
+/* Cursor segunda línea */
+@keyframes showCursorH2Line2 {
+  to {
+    border-right: 2px solid #B76FFF;
+  }
+}
+
+/* Escritura segunda línea */
+@keyframes typingH2Line2 {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 39ch;
+  }
+}
+
+/* Ocultar cursor segunda línea */
+@keyframes hideCursorLine2 {
+  to {
+    border-right: 2px solid transparent;
+  }
 }
 
 /*Fin-Primera sección, home*/
@@ -437,7 +510,8 @@ svg {
 
 /* Navegador inferior centrado */
 .nav-lateral {
- position: static; /* o eliminar position */
+  position: static;
+  /* o eliminar position */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -489,6 +563,7 @@ svg {
   from {
     box-shadow: 0 0 5px #916BBF;
   }
+
   to {
     box-shadow: 0 0 20px #916BBF, 0 0 30px #916BBF;
   }
@@ -506,7 +581,8 @@ svg {
 /* Contenido principal */
 main {
   flex: 1;
-  padding-bottom: 10px; /* espacio para el menú inferior */
+  padding-bottom: 10px;
+  /* espacio para el menú inferior */
 }
 
 .main-content {
@@ -592,8 +668,8 @@ footer {
   justify-content: center;
   list-style: none;
   gap: 10px;
-  width: fit-content; 
-  margin: 5px auto 20px auto; 
+  width: fit-content;
+  margin: 5px auto 20px auto;
   padding: 10px;
   border-radius: 10px;
 }
@@ -671,82 +747,153 @@ footer {
 
 
 /*Inicio de Sección Tecnologías*/
-/* =========================
-   CONTENEDOR DE TARJETAS
-========================= */
-
+/* CONTENEDOR DE TARJETAS*/
 .cards-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-
-    padding: 20px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 20px 70px;
 }
 
 
-/* =========================
-   TARJETA
-========================= */
-
+/*TARJETA*/
 .tech-card {
-    width: 150px;
-    height: 180px;
-
-    flex: 0 0 150px;
-
-    text-align: center;
-
-    border-radius: 15px;
-    overflow: hidden;
+  width: 150px;
+  height: 180px;
+  flex: 0 0 150px;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 
-/* =========================
-   ICONO
-========================= */
+/*ICONO*/
 
 .tech-card img {
-    width: 100%;
-    height: 120px;
-
-    object-fit: contain;
-
-    padding: 10px;
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  padding: 10px;
 }
 
 
-/* =========================
-   TEXTO
-========================= */
-
+/*TEXTO*/
 .tech-card .card-body {
-    height: 40px;
-
-    padding: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tech-card .card-text {
-    margin: 0;
+  margin: 0;
 
-    font-weight: 600;
+  font-weight: 600;
 }
 
+/*Fin de Sección Tecnologías*/
 
+
+
+
+
+/* =========================
+   RESPONSIVE - Home
+   ========================= */
+
+@media (max-width: 576px) {
+
+  /* Evita desplazamiento horizontal */
+  body {
+    overflow-x: hidden;
+  }
+
+  .img_avatar {
+    width: 60%;
+    height: 60%;
+  }
+
+  /* Contenedor de la información */
+  .col-md-6 {
+    width: 100%;
+  }
+
+  /* Títulos principales */
+  h1 {
+    font-size: 1rem;
+  }
+
+  /* Subtítulo */
+  h2 {
+    font-size: 1rem;
+    width: 100%;
+    overflow: visible;
+    line-height: 1.5;
+  }
+
+  /* Líneas del efecto typewriter */
+  .h2-line1,
+  .h2-line2 {
+    display: block;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Primera línea */
+  .h2-line1 {
+    animation:
+      showCursorH2Line1 0s 4.2s forwards,
+      typingH2Line1Mobile 2.8s steps(36, end) 4.2s forwards,
+      hideCursorLine1 0s 7s forwards;
+  }
+
+  /* Segunda línea */
+  .h2-line2 {
+    animation:
+      showCursorH2Line2 0s 7.1s forwards,
+      typingH2Line2Mobile 3s steps(39, end) 7.1s forwards,
+      hideCursorLine2 0s 10.1s forwards;
+  }
+
+  /* Primera línea completa */
+  @keyframes typingH2Line1Mobile {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  /* Segunda línea completa */
+  @keyframes typingH2Line2Mobile {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+}
+
+/*Inicio responsive tecnologías*/
 /* =========================
    TABLET
 ========================= */
 
 @media (max-width: 991px) {
 
-    .cards-container {
-        gap: 20px;
-        padding: 20px 50px;
-    }
+  .cards-container {
+    gap: 20px;
+    padding: 20px 50px;
+  }
 
 }
 
@@ -757,14 +904,16 @@ footer {
 
 @media (max-width: 576px) {
 
-    .cards-container {
-        gap: 0;
-        padding: 20px 50px;
-    }
+  .cards-container {
+    gap: 0;
+    padding: 20px 50px;
+  }
 
-    .tech-card {
-        width: 150px;
-        flex: 0 0 150px;
-    }
+  .tech-card {
+    width: 150px;
+    flex: 0 0 150px;
+  }
 
 }
+
+/*Fin responsive tecnologías*/
