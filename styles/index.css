@@ -866,3 +866,10 @@ footer {
 }
 
 /*Fin responsive tecnologías*/
+
+/*Inicio responsive Sobre mi*/
+@media (max-width: 767.98px) {
+  .rompecabezas {
+    grid-template-columns: 1fr;
+  }
+}
