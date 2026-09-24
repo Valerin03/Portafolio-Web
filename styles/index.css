@@ -547,6 +547,9 @@ main {
   backdrop-filter: blur(10px);
 }
 
+.svg_menu{
+  stroke: #ffffff;
+}
 
 .menu-inferior {
   display: flex;
@@ -570,7 +573,7 @@ main {
   cursor: pointer;
 }
 
-/* From Uiverse.io by uiverse-astronaut */ 
+/* From Uiverse.io by uiverse-astronaut */
 @import url("s://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 
 .cir-tabs {
@@ -604,19 +607,12 @@ main {
     box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-
 .cir-tabs__t:hover {
   background-color: var(--icons-innactivo);
-padding: 1px;
+  padding: 9px;
 }
 
-.cir-tabs__r:checked + .cir-tabs__t {
-  background: var(--color-ink, #0e1116);
-  color: var(--color-cloud, #ffffff);
-  box-shadow:
-    0 1px 1px rgba(14, 17, 22, 0.06),
-    0 8px 18px -10px rgba(14, 17, 22, 0.5);
-}
+
 
 
 
