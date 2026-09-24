@@ -696,18 +696,50 @@ footer {
 
 
 
-/*Inicio de Sección Tecnologías*/
-/* CONTENEDOR DE TARJETAS*/
+/* ============================= */
+/* SECCIÓN TECNOLOGÍAS */
+/* ============================= */
+
+#tecnologias {
+  height: 80vh;
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Título */
+
+#tecnologias h2 {
+  margin: 50px 0 45px 0;
+  color: #fff;
+}
+
+
+/* Carrusel */
+#carouselTecnologias {
+  width: 100%;
+  max-width: 1100px;
+}
+
+
+/* Contenedor de tarjetas */
 .cards-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 25px;
-  padding: 20px 70px;
+  padding: 20px;
 }
 
 
-/*TARJETA*/
+/* Tarjetas */
+
 .tech-card {
   width: 150px;
   height: 180px;
@@ -718,7 +750,7 @@ footer {
 }
 
 
-/*ICONO*/
+/* Iconos */
 
 .tech-card img {
   width: 100%;
@@ -728,10 +760,12 @@ footer {
 }
 
 
-/*TEXTO*/
+/* Texto */
+
 .tech-card .card-body {
   height: 40px;
   padding: 0;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -739,13 +773,33 @@ footer {
 
 .tech-card .card-text {
   margin: 0;
-
   font-weight: 600;
 }
+/* Centrar el contenido del carrusel */
+#carouselTecnologias {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-/*Fin de Sección Tecnologías*/
+#carouselTecnologias .carousel-inner {
+  width: 100%;
+}
 
+#carouselTecnologias .carousel-item {
+  width: 100%;
+  text-align: center;
+}
 
+#carouselTecnologias .cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 20px 0;
+  margin-top: 50px;
+}
 
 
 /* =========================
