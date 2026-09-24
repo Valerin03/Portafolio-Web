@@ -244,7 +244,11 @@ svg {
   box-sizing: border-box;
   margin-top: 60px !important;
 }
-
+.icono img{
+  max-width: 120px;
+  max-height: 120px;
+  padding: 10px 0px;
+}
 /* Grid tipo rompecabezas */
 .rompecabezas {
   display: grid;
